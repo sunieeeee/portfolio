@@ -1,0 +1,10 @@
+export const BLACK ="#111";
+export const DARK = "#222";
+export const DARK_GRAY = '#444444';
+export const GRAY = '#616161';
+export const GRAY_OP = '#61616177';
+export const LIGHT_GRAY = '#eeeeee';
+export const WHITE = '#fff';
+export const BLACK_OP = '#00000011';
+export const GREEN = '#0f0';
+export const ORANGE = "color(srgb 0.9237 0.492 0.2921)";
