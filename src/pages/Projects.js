@@ -1,8 +1,8 @@
 import React, {memo} from 'react';
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import * as colors from "../assets/style/colors";
 import PageTitle from "../components/PageTitle";
-import SubTitle from "../components/SubTitle";
 
 const ProjectsContainer = styled.div`
   display: grid;
@@ -165,7 +165,7 @@ const Projects = memo(() => {
         <div className="box">
           <h4 className="title">Mary's Forest</h4>
           <span className="time">
-            <i class="fa-solid fa-calendar-days"></i>
+            <i className="fa-solid fa-calendar-days"></i>
             2001 - 2005
           </span>
           <p className="description">
@@ -183,15 +183,16 @@ const Projects = memo(() => {
           </ul>
 
           <span className="icon">
-            <i class="fa-solid fa-arrow-right"></i>
+            <i className="fa-solid fa-arrow-right"></i>
           </span>
-          
+
           <div className="short_desc">
             <p>Publishing</p>
             <h4>Mary's Forest</h4>
           </div>
 
-          <a className='link' href='/ProjectDetail'></a>
+          {/* <a className='link' href='/ProjectDetail'></a> */}
+          <NavLink className='link' to="/projects/detail"></NavLink>
         </div>
       </ProjectsContainer>
     </div>

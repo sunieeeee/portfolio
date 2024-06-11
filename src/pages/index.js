@@ -120,7 +120,7 @@ const Home = memo(() => {
             <li><span>Email</span>hee396555@gmail.com</li>
           </ul>
 
-          <PageBtn leftText="MORE" rightText="ABOUT ME" />
+          <PageBtn link="/about" leftText="MORE" rightText="ABOUT ME" />
         </div>
       </div>
     </MainContainer>

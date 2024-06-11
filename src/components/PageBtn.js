@@ -63,8 +63,8 @@ const BtnContainer = styled.a`
   }
 `;
 
-const PageBtn = ({ leftText, rightText }) => (
-  <BtnContainer href="/about" $leftText={leftText} $rightText={rightText}>
+const PageBtn = ({link, leftText, rightText }) => (
+  <BtnContainer href={link} $leftText={leftText} $rightText={rightText}>
     <div className="btn_inner">
       <span className="left">{leftText}</span>
       <span className="right">{rightText}</span>

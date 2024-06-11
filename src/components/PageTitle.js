@@ -13,7 +13,7 @@ const PageTitleContainer = styled.div`
   h2 {
     position: relative;
     &::before {
-      content: "${(props) => props.contentText}";
+      content: "${(props) => props.$contentText}";
       color: #fff;
       opacity: 0.3;
       font-size: 110px;
@@ -36,7 +36,7 @@ const PageTitleContainer = styled.div`
 
 const PageTitle = memo(({leftText, rightText, contentText}) => {
   return (
-    <PageTitleContainer contentText={contentText}>
+    <PageTitleContainer $contentText={contentText}>
         <h2>{leftText} <span>{rightText}</span></h2>
     </PageTitleContainer>
   )

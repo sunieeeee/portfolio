@@ -1,4 +1,4 @@
-import React, { memo, useRef, useCallback, useEffect } from "react";
+import React, { memo, useState, useRef, useCallback, useEffect } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import * as colors from "../assets/style/colors";
@@ -212,22 +212,26 @@ const MenuContainer = styled.nav`
 const MenuLink = memo(({ to, children }) => {
   const menuIcon = useRef();
   const navList = useRef();
+  const [isOpen, setIsOpen] = useState(true);
 
-  
-  const navOpenMo = useCallback(() => {
-    menuIcon.current.classList.toggle("menu_active");
-    navList.current.classList.toggle("menu_active");
+  const toggleMenu = useCallback(() => {
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   }, []);
-  
+
   useEffect(() => {
-    menuIcon.current.classList.add("menu_active");
-    navList.current.classList.add("menu_active");
-  }, []);
+    if (isOpen) {
+      menuIcon.current.classList.add("menu_active");
+      navList.current.classList.add("menu_active");
+    } else {
+      menuIcon.current.classList.remove("menu_active");
+      navList.current.classList.remove("menu_active");
+    }
+  }, [isOpen]);
 
   return (
     <MenuContainer>
       <div>
-        <div ref={menuIcon} className="menu_icon" onClick={navOpenMo}>
+        <div ref={menuIcon} className="menu_icon" onClick={toggleMenu}>
           <div></div>
         </div>
 
