@@ -3,6 +3,7 @@ import styled from "styled-components";
 import * as colors from "../assets/style/colors";
 import PageTitle from '../components/PageTitle';
 import SubTitle from "../components/SubTitle";
+import dataset from "../assets/dataset";
 
 const SkillsContainer = styled.div`
   display: grid;
@@ -10,7 +11,8 @@ const SkillsContainer = styled.div`
   gap: 30px;
 
   .box {
-    padding: 20px 30px 25px 40px;
+    padding: 20px 28px;
+    height: 280px;
     border-radius: 5px;
     border: 1px solid #252525;
   }
@@ -22,7 +24,7 @@ const SkillsContainer = styled.div`
     text-transform: uppercase;
     
     i {
-      font-size: 40px;
+      font-size: 37px;
       color: ${colors.ORANGE};
     }
   }
@@ -30,7 +32,7 @@ const SkillsContainer = styled.div`
   ul {
     li {
       position: relative;
-      padding: 15px 0 0 30px;
+      padding: 12px 0 0 30px;
       font-size: 14.5px;
       line-height: 1.6; 
       &::before {
@@ -50,6 +52,10 @@ const CareerContainer = styled.div`
   display: flex;
   gap: 60px;
 
+  .content {
+    width: 50%;
+  }
+
   ul {
     li {
       display: flex;
@@ -58,6 +64,7 @@ const CareerContainer = styled.div`
 
       .box {
         max-width: 92%;
+        width: 100%;
 
         .time {
           font-size: 14px;
@@ -121,6 +128,8 @@ const CareerContainer = styled.div`
 `;
 
 const About = memo(() => {
+
+
   return (
     <div className="inner">
       <PageTitle leftText="About" rightText="Me" contentText="About Me" />
@@ -128,66 +137,24 @@ const About = memo(() => {
       <section>
         <SubTitle text="MY SKILLS" border="none" />
         <SkillsContainer>
-          <div className="box">
-            <h4>
-              <i class="fa-solid fa-code"></i>
-              html
-            </h4>
-            <ul>
-              <li>
-                웹 표준과 웹 접근성을 준수하는 HTML 정보 구조설계로 웹 사이트
-                퍼블리싱을 해오고 있습니다.
-              </li>
-              <li>
-                웹 표준과 웹 접근성을 준수하는 HTML 정보 구조설계로 웹 사이트
-                퍼블리싱을 해오고 있습니다.
-              </li>
-              <li>
-                웹 표준과 웹 접근성을 준수하는 HTML 정보 구조설계로 웹 사이트
-                퍼블리싱을 해오고 있습니다.
-              </li>
-            </ul>
-          </div>
-          <div className="box">
-            <h4>
-              <i class="fa-solid fa-code"></i>
-              html
-            </h4>
-            <ul>
-              <li>
-                웹 표준과 웹 접근성을 준수하는 HTML 정보 구조설계로 웹 사이트
-                퍼블리싱을 해오고 있습니다.
-              </li>
-              <li>
-                웹 표준과 웹 접근성을 준수하는 HTML 정보 구조설계로 웹 사이트
-                퍼블리싱을 해오고 있습니다.
-              </li>
-              <li>
-                웹 표준과 웹 접근성을 준수하는 HTML 정보 구조설계로 웹 사이트
-                퍼블리싱을 해오고 있습니다.
-              </li>
-            </ul>
-          </div>
-          <div className="box">
-            <h4>
-              <i class="fa-solid fa-code"></i>
-              html
-            </h4>
-            <ul>
-              <li>
-                웹 표준과 웹 접근성을 준수하는 HTML 정보 구조설계로 웹 사이트
-                퍼블리싱을 해오고 있습니다.
-              </li>
-              <li>
-                웹 표준과 웹 접근성을 준수하는 HTML 정보 구조설계로 웹 사이트
-                퍼블리싱을 해오고 있습니다.
-              </li>
-              <li>
-                웹 표준과 웹 접근성을 준수하는 HTML 정보 구조설계로 웹 사이트
-                퍼블리싱을 해오고 있습니다.
-              </li>
-            </ul>
-          </div>
+          {dataset &&
+            dataset.skills &&
+            dataset.skills.map((v, i) => {
+              return (
+                <div className="box" key={i}>
+                  <h4>
+                    <i className={v.icon}></i>
+                    {v.title}
+                  </h4>
+                  <ul>
+                    {v.desc &&
+                      v.desc.map((desc, idx) => {
+                        return <li key={idx}>{desc}</li>;
+                      })}
+                  </ul>
+                </div>
+              );
+            })}
         </SkillsContainer>
       </section>
 
@@ -196,90 +163,57 @@ const About = memo(() => {
         <CareerContainer>
           <div className="content">
             <ul>
-              <li>
-                <div className="bullet_wrap">
-                  <span className="bullet"></span>
-                </div>
-                <div className="box">
-                  <span className="time">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    2001 - 2005
-                  </span>
-                  <h5 className="career_title">
-                    루미오 <span>- PUBLISHER</span>
-                  </h5>
-                  <p className="career_txt">
-                    솔루션 회사인 루미오에서 퍼블리싱 작업을 담당하였습니다.
-                    솔루션 회사인 루미오에서 퍼블리싱 작업을 담당하였습니다.솔루션
-                    회사인 루미오에서 퍼블리싱 작업을 담당하였습니다. 솔루션
-                    회사인 루미오에서 퍼블리싱 작업을 담당하였습니다.
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div className="bullet_wrap">
-                  <span className="bullet"></span>
-                </div>
-                <div className="box">
-                  <span className="time">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    2001 - 2005
-                  </span>
-                  <h5 className="career_title">
-                    루미오 <span>- PUBLISHER</span>
-                  </h5>
-                  <p className="career_txt">
-                    솔루션 회사인 루미오에서 퍼블리싱 작업을 담당하였습니다.
-                    솔루션 회사인 루미오에서 퍼블리싱 작업을 담당하였습니다.솔루션
-                    회사인 루미오에서 퍼블리싱 작업을 담당하였습니다. 솔루션
-                    회사인 루미오에서 퍼블리싱 작업을 담당하였습니다.
-                  </p>
-                </div>
-              </li>
+              {dataset.experience.map((v, i) => {
+                return (
+                  <li key={i}>
+                    <div className="bullet_wrap">
+                      <span className="bullet"></span>
+                    </div>
+                    <div className="box">
+                      <span className="time">
+                        <i className="fa-solid fa-calendar-days"></i>
+                        {v.period}
+                      </span>
+                      <h5 className="career_title">
+                        {v.name} <span>- {v.position}</span>
+                      </h5>
+                      <p className="career_txt">
+                        {v.desc.map((desc, idx) => {
+                          return <span key={idx}>{desc}</span>;
+                        })}
+                      </p>
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </div>
+
           <div className="content">
             <ul>
-              <li>
-                <div className="bullet_wrap">
-                  <span className="bullet"></span>
-                </div>
-                <div className="box">
-                  <span className="time">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    2001 - 2005
-                  </span>
-                  <h5 className="career_title">
-                    루미오 <span>- PUBLISHER</span>
-                  </h5>
-                  <p className="career_txt">
-                    솔루션 회사인 루미오에서 퍼블리싱 작업을 담당하였습니다.
-                    솔루션 회사인 루미오에서 퍼블리싱 작업을 담당하였습니다.솔루션
-                    회사인 루미오에서 퍼블리싱 작업을 담당하였습니다. 솔루션
-                    회사인 루미오에서 퍼블리싱 작업을 담당하였습니다.
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div className="bullet_wrap">
-                  <span className="bullet"></span>
-                </div>
-                <div className="box">
-                  <span className="time">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    2001 - 2005
-                  </span>
-                  <h5 className="career_title">
-                    루미오 <span>- PUBLISHER</span>
-                  </h5>
-                  <p className="career_txt">
-                    솔루션 회사인 루미오에서 퍼블리싱 작업을 담당하였습니다.
-                    솔루션 회사인 루미오에서 퍼블리싱 작업을 담당하였습니다.솔루션
-                    회사인 루미오에서 퍼블리싱 작업을 담당하였습니다. 솔루션
-                    회사인 루미오에서 퍼블리싱 작업을 담당하였습니다.
-                  </p>
-                </div>
-              </li>
+              {dataset.education.map((v, i) => {
+                return (
+                  <li key={i}>
+                    <div className="bullet_wrap">
+                      <span className="bullet"></span>
+                    </div>
+                    <div className="box">
+                      <span className="time">
+                        <i className="fa-solid fa-calendar-days"></i>
+                        {v.period}
+                      </span>
+                      <h5 className="career_title">
+                        {v.name} <span>- {v.position}</span>
+                      </h5>
+                      <p className="career_txt">
+                        {v.desc.map((desc, idx) => {
+                          return <span key={idx}>{desc}</span>;
+                        })}
+                      </p>
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </CareerContainer>

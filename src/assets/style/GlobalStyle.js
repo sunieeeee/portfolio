@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
         color: ${colors.WHITE};
     }
 
-    *:not(.fa-refular):not(.fa-solid) {
+    *:not(.fa-refular):not(.fa-solid):not(i[class^="fa-"]) {
         font-family: var(--font-poppins);
         /* font-family: var(--font-sans, --font-montserrat, --font-myeongjo, --font-poppins); */
         /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Noto Sans KR", "Nanum Gothic", sans-serif, "Poppins", sans-serif; */

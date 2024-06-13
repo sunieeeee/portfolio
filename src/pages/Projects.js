@@ -1,10 +1,11 @@
-import React, {memo} from 'react';
+import React, { memo } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import dataset from "../assets/dataset";
 import * as colors from "../assets/style/colors";
 import PageTitle from "../components/PageTitle";
 
-const ProjectsContainer = styled.div`
+const ProjectsContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -23,7 +24,6 @@ const ProjectsContainer = styled.div`
       position: absolute;
       top: 5%;
       left: 5%;
-      -webkit-transition: all 0.4s cubic-bezier(0.57, 0.21, 0.69, 1.25);
       transition: all 0.4s cubic-bezier(0.57, 0.21, 0.69, 1.25);
       z-index: 2;
     }
@@ -54,6 +54,7 @@ const ProjectsContainer = styled.div`
         }
       }
     }
+
     .title {
       margin-bottom: 15px;
       font-size: 24px;
@@ -79,7 +80,7 @@ const ProjectsContainer = styled.div`
       font-size: 14px;
       line-height: 1.7;
     }
-    
+
     .tech_stack {
       display: flex;
       flex-wrap: wrap;
@@ -87,9 +88,9 @@ const ProjectsContainer = styled.div`
 
       li {
         font-size: 13px;
-        padding: 4px 10px;
+        padding: 4px 5px;
         border: 1.5px solid #7e7e7e;
-        border-radius: 20px;
+        border-radius: 4px;
       }
     }
 
@@ -106,9 +107,7 @@ const ProjectsContainer = styled.div`
       text-align: center;
       font-size: 20px;
       color: ${colors.WHITE};
-      -webkit-transition: all 0.5s;
       transition: all 0.5s;
-      -webkit-transform: translateX(50px);
       transform: translateX(50px);
       opacity: 0;
       visibility: hidden;
@@ -127,9 +126,7 @@ const ProjectsContainer = styled.div`
         font-size: 13px;
         opacity: 0;
         visibility: hidden;
-        -webkit-transform: translateY(50px);
         transform: translateY(50px);
-        -webkit-transition: all 0.4s;
         transition: all 0.4s;
       }
 
@@ -138,9 +135,7 @@ const ProjectsContainer = styled.div`
         margin-top: 5px;
         opacity: 0;
         visibility: hidden;
-        -webkit-transform: translateY(50px);
         transform: translateY(50px);
-        -webkit-transition: all 0.4s;
         transition: all 0.4s;
       }
     }
@@ -148,52 +143,48 @@ const ProjectsContainer = styled.div`
     .link {
       z-index: 5;
       position: absolute;
-      left: 0; 
+      left: 0;
       top: 0;
       display: block;
       width: 100%;
       height: 100%;
     }
   }
-`;   
+`;
 
 const Projects = memo(() => {
   return (
     <div className="inner">
       <PageTitle leftText="My" rightText="Projects" contentText="Projects" />
       <ProjectsContainer>
-        <div className="box">
-          <h4 className="title">Mary's Forest</h4>
-          <span className="time">
-            <i className="fa-solid fa-calendar-days"></i>
-            2001 - 2005
-          </span>
-          <p className="description">
-            키즈놀이터 홈페이지입니다. 메인페이지, 메리의 숲 이야기 페이지,
-            공간안내 페이지, 예약페이지, 공지사항페이지의 퍼블리싱을
-            담당하였습니다. 모든 페이지가 반응형으로서 모바일, 태블릿에서도
-            문제없이 볼 수 있도록 제작하였습니다.
-          </p>
-          <ul className="tech_stack">
-            <li>html & css</li>
-            <li>jquery</li>
-            <li>javascript</li>
-            <li>bootstrap</li>
-            <li>flatpicker</li>
-          </ul>
+        {dataset && dataset.projects && dataset.projects.map((v, i) => {
+          return (
+            <div className="box" key={i}>
+              <h4 className="title">{v.title}</h4>
+              <span className="time">
+                <i className="fa-solid fa-calendar-days"></i>
+                {v.period}
+              </span>
+              <p className="description">{v.desc}</p>
+              <ul className="tech_stack">
+                {v.tech.map((desc, idx) => {
+                  return <li key={idx}>{desc}</li>;
+                })}
+              </ul>
 
-          <span className="icon">
-            <i className="fa-solid fa-arrow-right"></i>
-          </span>
+              <span className="icon">
+                <i className="fa-solid fa-arrow-right"></i>
+              </span>
 
-          <div className="short_desc">
-            <p>Publishing</p>
-            <h4>Mary's Forest</h4>
-          </div>
+              <div className="short_desc">
+                <p>Publishing</p>
+                <h4>{v.title}</h4>
+              </div>
 
-          {/* <a className='link' href='/ProjectDetail'></a> */}
-          <NavLink className='link' to="/projects/detail"></NavLink>
-        </div>
+              <NavLink className="link" to={"/projects/" + v.title}></NavLink>
+            </div>
+          );
+        })}
       </ProjectsContainer>
     </div>
   );

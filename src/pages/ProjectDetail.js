@@ -1,9 +1,12 @@
 import React, { memo , useState, useEffect} from "react";
 import styled from "styled-components";
+import {useParams} from 'react-router-dom';
+
 import * as colors from "../assets/style/colors";
 import PageTitle from "../components/PageTitle";
 import SubTitle from "../components/SubTitle";
 import PageBtn from "../components/PageBtn";
+import dataset from "../assets/dataset";
 
 const DetailContainer = styled.div`
   > div:not(.detail) {
@@ -47,15 +50,30 @@ const DetailContainer = styled.div`
     }
 
     ul li {
+      display: flex;
       margin-bottom: 6px;
       line-height: 1.5;
 
       b {
         display: inline-block;
-        padding-right: 20px;
+        min-width: 3.3%;
+        /* padding-right: 20px; */
 
         i {
           color: ${colors.ORANGE};
+        }
+      }
+
+      .tech_stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+
+        li {
+          font-size: 14px;
+          padding: 2px 7px;
+          border: 1.5px solid #7e7e7e;
+          border-radius: 4px;
         }
       }
     }
@@ -85,59 +103,70 @@ const DetailContainer = styled.div`
 `;
 
 const ProjectDetail = memo(() => {
+  const {title} = useParams();
+  console.log(title);
+
+  const projectItem = dataset.projects.find(v => v.title === title);
+  console.log(projectItem.view);
 
   return (
-    <DetailContainer className="inner">
-      <PageTitle rightText="Mary's Forest" contentText="Projects" />
-      <SubTitle text="기업 사이트 제작" border="none" />
+    <article>
+      <DetailContainer className="inner">
+        <PageTitle rightText={projectItem.title} contentText="Projects" />
+        <SubTitle text={projectItem.sub_title} border="none" />
 
-      <div class="detail">
-        <h3>OverView.</h3>
-        <p>
-          키즈놀이터 홈페이지입니다. 메인페이지, 메리의 숲 이야기 페이지,
-          공간안내 페이지, 예약페이지, 공지사항페이지의 퍼블리싱을
-          담당하였습니다.
-          <br /> 모든 페이지가 반응형으로서 모바일, 태블릿에서도 문제없이 볼 수
-          있도록 제작하였습니다.
-        </p>
-      </div>
+        <div className="detail">
+          <h3>OverView.</h3>
+          {projectItem.desc.map((v, i) => (
+            <p key={i}>{v}</p>
+          ))}
+        </div>
 
-      <div class="detail">
-        <h3>WorkInfo.</h3>
-        <ul>
-          <li>
-            <b>
-              <i class="fa-solid fa-user"></i>
-            </b>
-            100%
-          </li>
-          <li>
-            <b>
-              <i class="fa-solid fa-hourglass"></i>
-            </b>
-            2022.05 ~ 2022.09 (5개월)
-          </li>
-          <li>
-            <b>
-              <i class="fa-solid fa-layer-group"></i>
-            </b>
-            메인페이지, 메리의 숲 이야기 페이지, 공간안내 페이지, 예약페이지,
-            공지사항페이지의 퍼블리싱 담당
-          </li>
-          <li>
-            <b>
-              <i class="fa-solid fa-screwdriver-wrench"></i>
-            </b>
-            bootstrap, html, css, jquery, javascript, flatpicker, git, gitlab
-          </li>
+        <div className="detail">
+          <h3>WorkInfo.</h3>
+          <ul>
+            <li>
+              <b>
+                <i className="fa-solid fa-user"></i>
+              </b>
+              100%
+            </li>
+            <li>
+              <b>
+                <i className="fa-solid fa-hourglass"></i>
+              </b>
+              {projectItem.period}
+            </li>
+            <li>
+              <b>
+                <i className="fa-solid fa-layer-group"></i>
+              </b>
+              {projectItem.work_area}
+            </li>
+            <li>
+              <b>
+                <i className="fa-solid fa-screwdriver-wrench"></i>
+              </b>
+              <ul className="tech_stack">
+                {projectItem.tech.map((v, i) => (<li key={i}>{v}</li>))}
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div className="detail detail_btn">
+          <PageBtn link={projectItem.link} leftText="PROJECT" rightText=": LINK"/>
+          <PageBtn link={projectItem.github} leftText="GITHUB" rightText=": LINK" />
+        </div>
+
+        <ul className="detail_view">
+            <li>
+              <h5>💡 {projectItem.view.map((v, i) => {v})}</h5>
+              <p></p>
+            </li>
         </ul>
-      </div>
-
-      <div className="detail detail_btn">
-        <PageBtn link="http://marysforest.co.kr/view/" leftText="PROJECT" rightText=": LINK" />
-        <PageBtn link="" leftText="GITHUB" rightText=": LINK" />
-      </div>
-    </DetailContainer>
+      </DetailContainer>
+    </article>
   );
 });
 
