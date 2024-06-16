@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <rect width="24" height="24" id="artboard_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#artboard_1" clip-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="Icon24Arrow_Down_24" clip-path="url(#clip_1)">
+    <path d="M24 0L24 24L-1.90735e-06 24L0 -1.04907e-06L24 0Z" id="Rectangle" fill="none" fill-rule="evenodd" stroke="none" />
+    <path d="M18.6667 9.33333L12 16L5.33333 9.33333" id="Path" fill="none" fill-rule="evenodd" stroke="#666666" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

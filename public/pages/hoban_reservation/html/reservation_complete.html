@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://main.roomio.co.kr/theme/basic/style.css?ver=20211213160611">
+  <link rel="stylesheet" href="../bootsstrap/boots.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../js/main.js"></script>
+  <title>리솜리조트</title>
+  <style>
+    table {
+      border-collapse: collapse
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container wrap_container complete_container" id="reservation_complete">
+    <header>
+      <div class="inner">
+        <div>
+          <div class="logo"><a href="../html/main.html"><img src="../img/logo.svg"></a></div>
+          <h1>레스트리/포레스트 리솜</h1>
+        </div>
+        <div class="bd-example">
+          <button type="button" class="headerBtn btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">예약조회</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="inner">
+      <div class="wrap">
+        <section class="userInfo">
+          <h4>객실 정보</h4>
+          <div class="inputBox">
+            <div class="labelWrap"><label>예약번호</label><img class="dotRed" src="../img/Essential_Filled_16.svg"></div>
+            <div class="sm_input">
+              <p>0413000127</p>
+            </div>
+          </div>
+          <div class="inputBox">
+            <div class="labelWrap"><label>투숙객명</label><img class="dotRed" src="../img/Essential_Filled_16.svg"></div>
+            <div class="sm_input">
+              <p>홍길동</p>
+            </div>
+          </div>
+          <div class="inputBox">
+            <div class="labelWrap"><label>휴대폰 번호</label><img class="dotRed" src="../img/Essential_Filled_16.svg"></div>
+            <div class="sm_input">
+              <p>010-0000-0000</p>
+            </div>
+          </div>
+          <div class="inputBox">
+            <div class="labelWrap"><label>이메일주소</label><img class="dotRed" src="../img/Essential_Filled_16.svg"></div>
+            <div class="sm_input">
+              <p>test@gmail.com</p>
+            </div>
+          </div>
+          <div class="inputBox">
+            <div class="labelWrap"><label>요청사항<span>(선택)<span></label></div>
+            <div class="sm_input">
+              <p>체크인 6시로 미뤄주세요.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="wrap">
+        <section class="reservationInfo">
+          <h4>예약 정보</h4>
+          <div class="reservationInfo_inner">
+            <p class="packageName">[포레스트·제천] 해브나인패키지</p>
+            <h5>[포레스트] S25빌라형 (기준5/최대5)</h5>
+            <div class="checkLeft">
+              <div class="check">
+                <div class="checkInout">
+                  <img src="../img/in.svg">
+                  <p class="checkLabel">체크인</p>
+                </div>
+                <p class="checkDate"><span class="year">2021</span> 12/08(화)&nbsp;15:00</p>
+              </div>
+              <div class="check day">
+
+                <p class="">1박</p>
+              </div>
+              <div class="check">
+                <div class="checkInout">
+                  <img src="../img/in.svg">
+                  <p class="checkLabel">체크아웃</p>
+                </div>
+                <p class="checkDate"><span class="year">2021</span> 12/08(화)&nbsp;12:00</p>
+              </div>
+            </div>
+            <div class="checkRight">
+              <div class="check">
+                <img src="../img/rooms.svg">
+                <p class="checkLabel">객실<span>1</span></p>
+
+              </div>
+              <div class="check">
+                <img src="../img/user.svg">
+                <p class="checkLabel">인원<span>2</span></p>
+
+              </div>
+              <div class="check">
+                <p class="checkLabel">(성인2/아동0)</p>
+              </div>
+            </div>
+            <div class="noticeWrap">
+              <div class="notice">
+                <span>·</span>
+                <p><strong>현장결제</strong><br>추가인원 비용등의 현장결제 발생 상품을 확인하세요.</p>
+              </div>
+              <div class="notice">
+                <span>·</span>
+                <p><strong>현장결제</strong><br>추가인원 비용등의 현장결제 발생 상품을 확인하세요.</p>
+              </div>
+              <div class="notice">
+                <span>·</span>
+                <p><strong>현장결제</strong><br>추가인원 비용등의 현장결제 발생 상품을 확인하세요.</p>
+              </div>
+            </div>
+            <div class="totalPay">
+              <strong>총 결제금액</strong>
+              <div class="totalPay_price"><span class="vat">1박 / VAT 포함</span><strong class="">409,000</strong><span class="won">원</span></div>
+            </div>
+          </div>
+        </section>
+        <div class="paybtnBox">
+          <div class="payBtn grayBtn"><a href="./main.html">처음으로</a></div>
+          <div class="payBtn orangeBtn"><a href="./reservation_confirm.html">예약내역 확인</a></div>
+        </div>
+      </div>
+    </div> <!-- inner끝 -->
+  </div>
+
+  <footer>
+    <div class="inner">
+      <div class="footerLogo"><img src="../img/logo.svg"></div>
+      <p class="txt">(주)호반호텔&리조트 대표자 : 이정호 대표전화 : 1600-0060<br>주소 : 충청북도 제천시 백운면 금봉로365<br>사업자번호 : 30581263213 사업자번호 : 30581263213<br><b class="copyrignt">COPYRIGHT(C) HOBAN HOTEL & RESORT. ALL RIGHTS RESERVED.</b></p>
+    </div>
+  </footer>
+</body>
+</html>

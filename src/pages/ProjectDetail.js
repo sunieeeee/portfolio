@@ -100,14 +100,41 @@ const DetailContainer = styled.div`
       }
     }
   }
+
+  .detail_view {
+    li {
+      margin-bottom: 50px;
+
+      &:last-of-type {
+        margin-bottom: 80px;
+      }
+
+      .view_title {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      
+      .view_desc {
+        font-size: 16px;
+      }
+      .view_img {
+        display: block;
+        margin-top: 10px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 `;
 
 const ProjectDetail = memo(() => {
   const {title} = useParams();
   console.log(title);
 
-  const projectItem = dataset.projects.find(v => v.title === title);
-  console.log(projectItem.view);
+  const projectItem = dataset.projects && dataset.projects.find(
+    (v) => v.title === title
+  );
 
   return (
     <article>
@@ -148,22 +175,37 @@ const ProjectDetail = memo(() => {
                 <i className="fa-solid fa-screwdriver-wrench"></i>
               </b>
               <ul className="tech_stack">
-                {projectItem.tech.map((v, i) => (<li key={i}>{v}</li>))}
+                {projectItem.tech.map((v, i) => (
+                  <li key={i}>{v}</li>
+                ))}
               </ul>
             </li>
           </ul>
         </div>
 
         <div className="detail detail_btn">
-          <PageBtn link={projectItem.link} leftText="PROJECT" rightText=": LINK"/>
-          <PageBtn link={projectItem.github} leftText="GITHUB" rightText=": LINK" />
+          {projectItem.link && (<PageBtn link={projectItem.link} leftText="PROJECT" rightText=": LINK"/>)}
+          {projectItem.github && (<PageBtn link={projectItem.github} leftText="GITHUB" rightText=": LINK"/>)}
         </div>
 
-        <ul className="detail_view">
-            <li>
-              <h5>💡 {projectItem.view.map((v, i) => {v})}</h5>
-              <p></p>
-            </li>
+        <ul className="detail detail_view">
+          {projectItem.view &&
+            projectItem.view.map((v, i) => {
+              return (
+                <li key={i}>
+                  {v.name && <h5 className="view_title">💡 {v.name}</h5>}
+                  {v.text &&
+                    v.text.map((item, idx) => {
+                      return (
+                        <p key={idx} className="view_desc">
+                          {item}
+                        </p>
+                      );
+                    })}
+                  <img className="view_img" src={v.img} alt={v.name} />
+                </li>
+              );
+            })}
         </ul>
       </DetailContainer>
     </article>

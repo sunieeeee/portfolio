@@ -128,51 +128,155 @@ const dataset = {
       github: "https://github.com/sunieeeee/paikdabang?tab=readme-ov-file",
       view: [
         {
-          name: "메인페이지",
+          name: "메인 페이지",
           text: [
-            "swiper를 사용한 이미지 슬라이드영역, 각각 다른 스타일을 준 배너영역, sns영역으로 나뉜다.",
-            "배너의 인덱스를 기준으로 프렌차이즈영역에는 ‘btn_house’ 클래스를, 매장정보 영역에는 ‘btn_store’클래스를 적용하여 각각 다른 스타일을 적용하였다.",
+            "swiper를 사용한 이미지 슬라이드 영역, 각각 다른 스타일을 준 배너 영역, SNS 영역으로 나뉜다.",
+            "배너의 인덱스를 기준으로 프렌차이즈영역에는 ‘btn_house’ 클래스를, 매장 정보 영역에는 ‘btn_store’클래스를 적용하여 각각 다른 스타일을 적용하였다.",
           ],
-          img: "/paikdabang/main.gif",
+          img: "/img/projects/paikdabang/main.gif",
         },
         {
-          name: "메인페이지",
+          name: "메뉴 페이지",
           text: [
-            "swiper를 사용한 이미지 슬라이드영역, 각각 다른 스타일을 준 배너영역, sns영역으로 나뉜다.",
-            "배너의 인덱스를 기준으로 프렌차이즈영역에는 ‘btn_house’ 클래스를, 매장정보 영역에는 ‘btn_store’클래스를 적용하여 각각 다른 스타일을 적용하였다.",
+            "전부 같은 구조이기 때문에 파일이름에 대괄호를 넣었고 Redux를 통해 서브 메뉴를 클릭함에 따라 데이터만 다르게 가져오도록 만들었다.",
+            "메뉴 항목을 클릭하면 ‘menuToggle’함수가 호출되어 ‘MenuInfo’컴포넌트에 ‘menuActive’ 클래스가 토글 되면서 메뉴 상세 정보를 표시하거나 감춘다.",
           ],
-          img: "/paikdabang/main.gif",
+          img: "/img/projects/paikdabang/menu.gif",
+        },
+        {
+          name: "소식 페이지",
+          text: [
+            "‘menu_new’ 카테고리인 경우, 모든 데이터를 반환 ‘menu_new’ 외의 카테고리인 경우 해당 카테고리에 맞는 데이터만 반환한다.",
+            "테이블형식인 TableContainer 내에서 data 배열을 순회하여 각 뉴스 항목을 tr로 렌더링한다.",
+          ],
+          img: "/img/projects/paikdabang/news.gif",
+        },
+        {
+          name: "커뮤니티 페이지",
+          text: [
+            "게시물 목록을 나타내며, 각 게시물 항목은 이미지, 제목, 날짜를 포함한다.",
+          ],
+          img: "/img/projects/paikdabang/community.gif",
+        },
+        {
+          name: "매장안내 페이지",
+          text: [
+            "지역 검색을 하였을 때 상태 값이 변할 때마다 그에 맞는 매장 정보 제공한다.",
+            "onChange이벤트를 통해 current.value를 set함수에 넣어 상태 값에 전달한다.",
+            "바뀐 상태 값은 redux를 통해 백엔드로 넘겨 원하는 데이터만 받아온다.",
+          ],
+          img: "/img/projects/paikdabang/store.gif",
         },
       ],
     },
     {
       title: "Mary's Forest",
+      sub_title: "기업사이트 제작",
       period: "2022.05 ~ 2022.09 (5개월)",
       desc: [
         "부트스트랩으로 만든 키즈놀이터 홈페이지입니다.",
-        "메인페이지, 메리의 숲 이야기 페이지, 공간안내 페이지, 예약페이지, 공지사항페이지의 퍼블리싱을 담당하였습니다.",
         "모든 페이지가 반응형으로서 모바일, 태블릿에서도 문제없이 볼 수 있도록 제작하였습니다.",
       ],
       tech: ["html & css", "jquery", "javascript", "bootstrap", "flatpicker"],
+      percent: "100%",
+      work_area:
+        "메인 페이지, 메리의 숲 이야기 페이지, 공간안내 페이지, 예약 페이지, 공지사항 페이지",
+      link: "/pages/marysforest/main.html",
+      view: [
+        {
+          name: "메인 페이지",
+          img: "/img/projects/marysforest/marys2_main.gif",
+        },
+        {
+          name: "메리의 숲 이야기 페이지",
+          img: "/img/projects/marysforest/marys2_about.gif",
+        },
+        {
+          name: "공간안내 페이지",
+          img: "/img/projects/marysforest/marys2_area.gif",
+        },
+        {
+          name: "예약 페이지",
+          img: "/img/projects/marysforest/marys2_reservation.gif",
+        },
+        {
+          name: "공지사항 페이지",
+          img: "/img/projects/marysforest/marys2_notice.gif",
+        },
+      ],
     },
     {
       title: "호반 리조트",
+      sub_title: "리조트 예약 사이트 제작",
       period: "2021.12~2022.01(2개월)",
       desc: [
         "호반기업에서 운영하고 있는 리조트의 예약사이트를 제작하였습니다.",
         "모든 페이지가 반응형으로서 모바일, 태블릿에서도 문제없이 볼 수 있도록 제작하였습니다.",
       ],
-      tech: ["html & css", "jquery", "daterangepicker", "bootstrap"],
+      tech: ["html & css", "jquery", "bootstrap"],
+      percent: "100%",
+      work_area:
+        "메인 페이지, 상품 상세 페이지, 상품 예약 페이지, 예약 완료 페이지, 상세 예약내역 확인 페이지, 고객정보 변경 페이지, 예약 취소 페이지, 전체 예약내역 페이지",
+      link: "/pages/hoban_reservation/html/main.html",
+      view: [
+        {
+          name: "메인 페이지",
+          img: "/img/projects/resome/hoban_main.JPG",
+        },
+        {
+          name: "상품 상세 페이지",
+          img: "/img/projects/resome/package_detail.JPG",
+        },
+        {
+          name: "상품 예약 페이지",
+          img: "/img/projects/resome/package_reservation.JPG",
+        },
+        {
+          name: "예약 완료 페이지",
+          img: "/img/projects/resome/reservation_complete.JPG",
+        },
+        {
+          name: "예약내역 상세 페이지",
+          img: "/img/projects/resome/reservation_confirm.JPG",
+        },
+        {
+          name: "고객정보 변경 페이지",
+          img: "/img/projects/resome/change_information.JPG",
+        },
+        {
+          name: "예약 취소 페이지",
+          img: "/img/projects/resome/reservation_cancel.JPG",
+        },
+        {
+          name: "전체 예약내역 페이지",
+          img: "/img/projects/resome/planningStay.JPG",
+        },
+      ],
     },
     {
       title: "대한상공회의소",
+      sub_title: "중소기업 복지 플랫폼 제작",
       period: "2021.08~2021.10(3개월)",
       desc: [
         "대한상공회의소의 중소기업복지플랫폼 입니다.",
-        "메인배너영역의 검색창, 날짜선택, 인원수 선택 부분을 자바스크립트, 제이쿼리를 사용하여 구현하였습니다.",
+        "헤더, 푸터를 제외한 컨텐츠 영역만 퍼블리싱을 하였고, IE에서도 문제없이 나오도록 구현하였습니다.",
         "반응형으로 제작되어 모바일, 태블릿에서도 문제없이 볼 수 있도록 제작하였습니다.",
       ],
       tech: ["html & css", "jquery", "javascript", "daterangepicker"],
+      percent: "100%",
+      work_area:
+        "원페이지로서 메인배너영역의 검색창, 날짜선택, 인원수 선택 부분을 구현하였습니다.",
+      // link: "/pages/hoban_reservation/html/main.html",
+      view: [
+        {
+          // title: "PC",
+          img: "/img/projects/korcham/korcham_pc.jpeg",
+        },
+        // {
+        //   title: "MO",
+        //   img: "/img/projects/korcham/korcham_mo.jpeg",
+        // },
+      ],
     },
   ],
 };

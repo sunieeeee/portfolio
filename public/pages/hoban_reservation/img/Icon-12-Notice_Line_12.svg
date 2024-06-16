@@ -1,0 +1,10 @@
+<svg id="Icon_12_Notice_Line_12" data-name="Icon/12/Notice_Line_12" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+  <rect id="Rectangle" width="18" height="18" fill="none"/>
+  <g id="Group_4" data-name="Group 4" transform="translate(1.5 1.5)">
+    <circle id="Oval" cx="7.5" cy="7.5" r="7.5" fill="none" stroke="#666" stroke-miterlimit="10" stroke-width="1"/>
+    <g id="Group" transform="translate(6.729 4.029)">
+      <path id="Path_2" data-name="Path 2" d="M.5,0V4.371" transform="translate(0.271)" fill="#666" stroke="#666" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rectangle-2" data-name="Rectangle" width="1.543" height="1.543" rx="0.6" transform="translate(0 6.043)" fill="#666"/>
+    </g>
+  </g>
+</svg>

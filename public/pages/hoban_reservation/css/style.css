@@ -1,0 +1,803 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a{text-decoration: none; border-radius: 4px; color:black;}
+ol,ul,li{list-style: none; outline:0;}
+button{border:0; background-color: transparent; cursor: pointer}
+p{margin-bottom: 0;}
+input, textarea{-webkit-appearance: none;}
+input[type="text"]{border: 0; }
+
+.h5, h5 {font-size: 1rem;}
+.check img{width:14px;}
+.priceInfo p{font-size: var(--font-scale-large); font-weight: 700; text-align :right;}
+.priceInfo span {float: right;}
+.footerLogo img{width:150px;}
+.hide{display:none !important;}
+footer pre {font-size:0.8rem ;}
+
+html {width:100%; height:100%; margin:0; padding:0;}
+body {width:100%; height:100%; margin:0; padding:0; position:relative;}
+.container, footer{padding: 0; width: 100%; }
+.container .inner, header .inner, footer .inner{width: 1200px; margin: 0 auto;}
+
+header{display: flex; flex-direction: row; align-items: center; width: 100%; height: 100px; background-color: #fff; border-bottom: 1px solid #ccc; transition: 0.3s}
+header .inner{display: flex; flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: nowrap;}
+header .inner > div{display: flex; flex-direction: row; justify-content: flex-start; align-items: center;}
+header .inner > div:first-of-type{width: 50%;}
+header .logo{display: inline-block;; width: 120px;}
+header .logo img{display: block; width: 100%}
+header h1{margin-bottom: 0; padding-left: 4%; width: 100%; font-size: 1.5rem; color: #241B15}
+header > p{font-size: 0.8rem}
+
+header.sticky{position: fixed;left: 0; top: 0; z-index: 999; box-shadow:0px 3px 6px #00000029}
+
+header#sub_header{padding: 0 20px; justify-content: flex-start;}
+header#sub_header a{display: block; width: 10%}
+header#sub_header h1{width: 80%; text-align: center;}
+
+.progressWrap{display: flex; flex-direction: row; align-items: center; margin: 0 0 1%; height: 67px; background-color:#fff; box-shadow:0px 3px 6px #00000029}
+
+.progressWrap .inner .stepWrap{
+display: flex; flex-direction: row; justify-content: flex-start; align-items: center; width: 70%;
+}
+.progressWrap .step{position: relative; padding-bottom: 1%; width: 33.333%; border-bottom: 1px solid #ADAEAC;}
+
+.progressWrap .step::before,.progressWrap .step3::after{position: absolute;content: ''; display: block; width: 6px; height: 6px; border-radius: 100%; background-color: #ADAEAC;}
+.progressWrap .step::before{left: 0; bottom: -3.23px;}
+.progressWrap .step3::after{right: 0; bottom: -3.23px;}
+
+.progressWrap .stepNumber{font-size: 0.75rem;}
+.progressWrap .stepNumber span{padding-left: 0.5%; color: #EE7500}
+.progressWrap .stepName{font-size: 0.88rem}
+#mainPage .progressWrap .step1{border-color: #EE7500}
+#mainPage .progressWrap .step1::before{background-color: #EE7500}
+
+.checkWrap{display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin: 1% auto 0; width: 1200px;}
+.checkWrap .checkInfo{
+display: flex; flex-direction: row; justify-content: space-between; align-items: center;
+width: 85%; height: 100%; border: 1px solid #ccc; background-color: #fff;border-radius: 4px
+}
+.checkWrap .checkInfo .checkLeft, .checkWrap.main_checkWrap .checkRight{display: flex; flex-direction: row; justify-content: space-between; align-items: center; height: 100%; border-radius: 4px}
+.checkWrap .checkInfo .checkLeft{width: 70%;}
+.checkWrap .checkInfo .checkLeft .check{width: 45%;}
+.checkWrap .checkInfo .checkLeft .check .year{color: gray}
+.checkWrap .checkInfo .checkLeft .check.day{position: relative; z-index: 0; width: 10%;}
+.checkWrap .checkInfo .checkLeft .check.day img{display: block; width: 100%}
+.checkWrap .checkInfo .checkLeft .check.day p{position: absolute; left: 50%; top:50%; z-index: 99999; transform: translate(-50%,-50%); color: #fff; font-size: 0.88rem}
+
+.checkWrap .checkInfo .checkRight{display: flex; flex-direction: row; justify-content: flex-start; padding: 2%; font-size: 0.88rem; width: 40%;}
+.checkWrap .checkInfo .checkRight .check{display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 50%;}
+
+.checkWrap .checkInfo .checkLabel{padding-left: 6px; font-size: 1rem}
+.checkWrap .checkInfo .checkRight p.checkLabel span{padding-left: 6px; font-size: 1rem;}
+
+.checkWrap.main_checkWrap{height: 46px;position: relative; }
+
+.checkWrap.main_checkWrap .checkInfo .check{display: flex; flex-direction: row; justify-content: center; align-items: center; font-size: 1rem}
+.checkWrap.main_checkWrap .checkInfo .check .checkInout{display: flex; flex-direction: row; justify-content: center; align-items: center;}
+.checkWrap.main_checkWrap .checkInfo .check .checkLabel{padding: 0 6px;}
+
+.checkWrap .checkBtn{width: 15%; height: 100%; background-color: #EE7500; border-radius: 4px;}
+.checkWrap .checkBtn a{display: block; width: 100%; height: 100%; color: #fff; line-height: 44px; text-align: center; font-size: 1rem}
+
+.wrap_container .inner{display: flex; flex-direction: row; justify-content: space-between;}
+.wrap_container .wrap{width: 49%;}
+
+section.reservationInfo{padding: 2% 0 0; }
+section.reservationInfo .reservationInfo_inner{border: 1px solid #ccc; border-radius: 4px;}
+section.reservationInfo .packageName{padding: 3% 2% 0; font-size:0.75rem; color: #707070}
+section.reservationInfo .reservationInfo_inner h5{padding: 2px 2% 3%;}
+section.reservationInfo .checkRight{display: flex; flex-direction: row; justify-content: flex-start; padding: 3% 2%; font-size: 0.88rem;}
+section.reservationInfo .checkRight .check{display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-right: 2%}
+section.reservationInfo .checkRight .check .checkLabel {padding: 0 6px;}
+
+section.reservationInfo .checkLeft img{margin-right: 5px}
+section.reservationInfo img{width: 12px}
+
+section.reservationInfo .payBtn{height: 50px; background-color: #EE7500; border-radius: 4px; overflow: hidden;}
+section.reservationInfo .payBtn a{display: block; width: 100%; height: 100%; color: #fff; text-align: center; line-height: 50px;}
+
+.totalPay{display: flex !important; flex-direction: row; justify-content: space-between; align-items: center; margin-top: 3%; padding: 3% 2%; text-align: right; border-top: 1px solid #ccc;}
+.totalPay .totalPay_price{width: 70%;} /*width: 50%; */
+.totalPay .totalPay_price .vat{font-size: 0.88rem} /*font-size: 0.7rem */
+.totalPay .totalPay_price > strong{padding: 0 2%;}
+.totalPay .totalPay_price .won{font-size: 0.88rem}
+
+section.reservationInfo .checkLeft{display: flex; flex-direction: row; justify-content: space-between; align-items: center; height: 66px; border: 1px solid #ccc;}
+
+section.reservationInfo .checkLeft .check{display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+font-size: 0.9rem;width: 45%;}
+
+section.reservationInfo .checkLeft .check .year{color: gray}
+section.reservationInfo .checkLeft .check.day{width: 10%; height: 100%; background-color: #EE7500}
+section.reservationInfo .checkLeft .check.day p{width: 100%; height: 100%; color: #fff; font-size: 0.9rem; text-align: center; line-height: 64px;}
+
+section.reservationInfo .check .checkInout {display: flex; flex-direction: row; justify-content: center; align-items: center;}
+
+section.roomInfo,section.userInfo,section.payInfo{padding:20px 0;}
+section { padding: 2%;}
+section.reservationInfo .noticeWrap{padding: 2%; background-color: #fff}
+section.reservationInfo .noticeWrap .notice span{ margin: -4.5px 1% 0 0;}
+
+.noticeWrap{padding: 3%; border-radius: 8px; background-color: #f9f9f9;}
+.notice{
+display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; padding: 0;}
+.noticeWrap .notice{margin-bottom: 2%;}
+.noticeWrap .notice:last-of-type{margin-bottom: 0;}
+.notice span{display: inline-block; margin-right: 2%;}
+.notice p{ font-weight: 400; font-size: 0.88rem;} /* font-size: 11px; */
+.noticeWrap .notice p strong{font-weight: 500; font-size:1rem;}/* font-size: 12px; */
+
+.dotRed {display: inline-block; margin: 4px 0 0 2px; width: 3px; height: 3px;}
+
+textarea{border: 1px solid #ccc; width: 100%; height: 80px; border-radius: 4px; padding: 2%; outline: none; font-size: 1rem; font-weight: 300;}
+
+.payBtn{border-radius: 4px;}
+.payBtn a{display: block; width: 100%; height: 100%;}
+.grayBtn{background-color: #F8F8F8; border: 1px solid #CCC}
+.grayBtn a{color: #707070}
+.orangeBtn{background-color: #EE7500}
+.orangeBtn a{color: #fff}
+
+.complete_container .labelWrap{padding-bottom: 10px;}
+.complete_container .inputBox .sm_input{border: 0;}
+.complete_container .inputBox .sm_input p{width: 100%; height: 100%; color: #333; font-weight: 600}
+.complete_container .inputBox textarea{color: #333;}
+
+.txtWrap{display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; padding-top: 20px; font-size: 1rem !important;}
+.txtWrap:first-of-type{padding-top: 0;}
+.txtWrap .txtName{width: 16%}
+
+.paybtnBox{display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-top: 2%; height: 50px;}
+.paybtnBox .payBtn{width: 49%;}
+.paybtnBox .payBtn a{display: block; width: 100%; height: 100%; text-align: center; line-height: 50px;}
+
+.inputBox{margin-top: 5px;}
+.inputBox:first-of-type{margin-top: 0;}
+.inputBox label{font-size: 1em; color: #999}
+.inputBox .warning{margin: 1% 0 3%; font-size: 0.75em; color: #ff4129}
+.inputBox .sm_input{height: 40px; border: 1px solid #ccc; border-radius: 4px; overflow: hidden;}
+
+.inputBox .sm_input input{display: block; padding: 0 2%; width: 100%; height: 100%; border: 0; font-size: 1.1em; font-weight: 300; outline: 0}
+.sm_input input::placeholder{color:#d6d6d6}
+
+.inputBox:nth-of-type(2) .sm_input, #identifyPage .inputBox:nth-of-type(3) .sm_input{display: flex; flex-direction: row;justify-content: space-between; align-items: center;}
+.inputBox:nth-of-type(2) .sm_input > input{width: 65%;}
+.inputBox .sm_input > .grayBtn.send{margin-top: 0; width: 35%; height: 30px; line-height: 28px; background-color: #fff; border: 1px solid #ebebeb; border-radius: 15px; font-size: 0.7em; color: #b6b6b6}
+
+.modal ul.facilities{display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; padding: 20px 0}
+.modal ul.facilities::after{content: ''; display: block; clear: both;}
+.modal ul.facilities li{
+display: flex; flex-direction: row; justify-content: flex-start; align-items : center;
+float: left; width: 25%; padding: 0 1% 2% 0}
+.modal ul.facilities li span{display: inline-block; margin-right: 5px;}
+.modal ul.facilities li span img{display: block; width: 100%}
+
+.modal-dialog{min-width: 700px}
+.modal-header h5{font-size: 1.2rem;font-weight: 600}
+.modal-body{font-size: 0.88rem}
+.modal-body h5{padding-top: 10px; font-weight: 600}
+.modal-body h5:first-of-type{padding-top: 0;}
+.modal .btn{padding: 0.375rem 0.75rem}
+.modal .orangeBtn{background-color: #EE7500}
+
+@media screen and (max-width: 840px){
+	.modal ul.facilities li{padding-bottom: 5%; width: 25%}
+}
+@media screen and (max-width: 480px){
+	.modal-body h5{padding-bottom: 1%}
+	.modal ul.facilities li{width: 33.333%}
+}
+
+@media screen and (max-width: 320px){
+	.modal-body h5{padding-bottom: 1%}
+	.modal ul.facilities li{width: 50%}
+}
+
+.reservation_status{display: inline-block; margin-left: 5px; padding:2px 7px; font-size: 0.88rem; text-align: cener; border-radius: 4px;font-weight: 300}
+.statusOrange{background-color: #EE7500; color: #fff;}
+
+.tab{margin: 1% 0 2%; height: 40px;}
+.tab button{margin-right: 1%; padding: 0 1%; width: 15%; height: 100%; text-align: left; color: #ADAEAC; border-bottom: 1px solid #ADAEAC; cursor: pointer; font-size: 1rem;}
+.tab button.tabOn{color:#EE7500; border-bottom: 1px solid #EE7500}
+
+.checkboxWrap .checkLi.allcheck{margin-bottom: 2%; padding: 0 2% 2%; border-bottom: 1px solid #ebebeb; }
+
+.checkboxWrap .checkLi{display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 0 2% 2%; width: 100%; height: 38px}
+.checkboxWrap .checkLi label{display: flex; flex-direction: row; justify-content: flex-start; align-items:flex-start; font-size: 1rem}
+
+.checkboxWrap .checkLi input{display: none}
+.checkboxWrap .checkLi input + label em{border: 1px solid #ccc; transform: translateY(3px); width: 16px; height: 16px; margin-right: 10px; border-radius: 2px;}
+.checkboxWrap .checkLi input:checked + label em{background-image: url('../img/Check.svg'); display: inline-block; background-repeat: no-repeat; background-position: center; background-size: contain; border-color: orange}
+
+.checkboxWrap .checkLi .left{width: 90%}
+.checkboxWrap .checkLi .right{width: 10%;text-align: right;}
+.checkboxWrap .checkLi .right a{display: block; width: 100%;}
+.checkboxWrap .checkLi .right img{display: inline-block;}
+
+.pay_bottom_show{display: none;}
+
+.rvt_progress{margin: 20px 0;}
+.rvt_progress img{display: block; width: 100%}
+
+
+/* footer */
+footer{margin-top: 5%; padding: 50px 0; border-top: 1px solid #ccc;}
+footer .inner{margin: 0 auto; width: 1200px;}
+footer p{padding-top: 2%; color: #ADADAD; font-size: 0.88rem; }
+footer p b{display: block; padding-top: 2%;}
+
+@media screen and (max-width: 1200px){
+	.container{max-width: none;}
+	.checkWrap{padding: 0 2%; margin: 1% auto 0; width: 100%;}
+	.container .inner, footer .inner{width: 100%; padding: 0 3%;}
+}
+@media screen and (max-width: 840px){
+	html{font-size: 14px;}
+}
+@media screen and (max-width: 768px){
+
+.checkWrap .checkInfo .checkLeft .check.day img{width: 100%}
+.txtWrap .txtName{width: 20%}
+}
+@media screen and (max-width: 680px){
+.txtWrap .txtName{width: 25%}
+.checkWrap .checkInfo .checkLeft .check.day{width: 15%;}
+.checkWrap.main_checkWrap .checkInfo .check, .checkWrap .checkInfo .checkLeft .check.day p{font-size: 1rem} /* font-size: 0.94rem */
+}
+
+@media screen and (max-width: 540px){
+html{font-size: 11px;}
+.wrap_container .inner{flex-direction: column-reverse}
+.wrap_container .wrap{width: 100%;}
+
+#reservation_complete .inner{flex-direction: column-reverse}
+.tab{height: 30px;}
+
+#packageReservation .reservationInfo .totalPay{display: none !important;}
+.pay_bottom_show{display: block;}
+.pay_bottom_show > .totalPay{border-top: 0;}
+}
+
+@media screen and (max-width: 480px){
+	.checkWrap .checkInfo .checkLeft .check.day{width: 20%;}
+	.checkWrap .checkInfo .checkLeft .check{flex-direction: column; justify-content: center; align-items: center;}
+	.checkDate{flex-direction: column;}
+	footer{margin-top: 23px;}
+}
+
+.errorPannel.pannel1,.errorPannel.pannel2{display: flex !important; justify-content: center; align-items: center; width: 100%;} /* height: 60vh */
+.errorPannel .errorWrap{padding: 0 10px; display: flex; flex-direction: column; align-items: center;}
+.errorPannel .errorWrap img.error{display: block; width: 100% !important;}
+.errorPannel .errorWrap .paybtnBox{margin-top: 8%; width: 100%}
+.errorPannel .errorWrap .paybtnBox .grayBtn{background-color: #f8f8f8 !important; width: 100% !important; line-height: 48px; text-align: center; color: #555;}
+
+.errorPannel_2 .errorWrap img.error{display: block; width: 40% !important;}
+.errorPannel_2 .errorWrap p{margin-top: 10%; font-size: 1.25rem}
+@media screen and (max-width: 480px){
+	.errorPannel .errorWrap img.error{display: block; width: 30% !important;}
+}
+
+#mainPage .pannel .pannel_item{display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 1.5%; padding-bottom: 1.5%; border-bottom: 1px solid #ccc}
+
+#mainPage .pannel .pannel_item .pic{ height: 100%; overflow: hidden; background-size: 100% 100%; background-repeat: no-repeat; background-position: center; overflow: hidden;}
+#mainPage .pannel .pannel_item .pic img{display: block; width: 110%;}
+
+#mainPage .pannel .pannel_item .info{padding: 1% 2%; height: 100%;}
+#mainPage .pannel .pannel_item .infoBtn{height: 100%;}
+
+#mainPage .pannel .package_item{height: 230px;}
+
+#mainPage .pannel .package_item .pic{width: 30%;}
+
+#mainPage .pannel .package_item .info{width: 50%;}
+#mainPage .pannel .pannel_item .info .infoTitle{font-size: 1.13rem}
+#mainPage .pannel .package_item .infoBtn{width: 20%; height: 100%;}
+
+#mainPage .pannel .package_item .infoBtn{display: flex; flex-direction: column; justify-content: flex-end;}
+#mainPage .pannel .package_item .infoBtn a.viewMore{display: block; width: 100%; height: 40px; background-color: #FCFCFC; border: 1px solid #ccc; color: #555; text-align: center; line-height: 38px;}
+
+#mainPage .general{display: none;}
+#mainPage .general .general_item{height: 180px;}
+#mainPage .general .general_item .pic{width: 20%;}
+#mainPage .general .general_item .info{width: 40%;}
+#mainPage .general .general_item .info .infoTitle{font-size: 0.94rem}
+#mainPage .general .general_item .info .max{font-size: 0.82em}
+#mainPage .general .general_item .infoBtn{width: 40%;}
+
+#mainPage .general .general_item .infoBtn{
+display: flex; flex-direction: row; justify-content: space-between; align-items: flex-end;
+}
+#mainPage .general .general_item .infoBtn .roomPrice{width: 31.333%; text-align: right; font-weight: bold; font-size: 1.38rem;}
+#mainPage .general .general_item .infoBtn .roomPrice span.vat{font-size: 10px;font-weight: normal;}
+
+#mainPage .general .general_item .infoBtn .roomPrice p{display: flex; flex-direction: row; justify-content: flex-end; align-items: center;}
+#mainPage .general .general_item .infoBtn .roomPrice p span{margin-top: 3px; padding-left: 1%; display: inline-block; font-weight: normal; font-size: 13px;}
+
+#mainPage .general .general_item .infoBtn .btn{width: 31.333%; height: 40px; border: 1px solid #DDE4E8; text-align: center; font-size: 1rem; border-radius: 4px;}
+#mainPage .general .general_item .infoBtn .btn{color: #555;}
+#mainPage .general .general_item .infoBtn .btn.roomSelect{background-color: #EE7500; color: #fff; line-height: 38px;}
+
+#mainPage .txtWrap{padding-top: 10px}
+
+
+.grayModal .modal-dialog{min-width: 400px}
+.grayModal .modal-content{background-color: #F8F8F8}
+.grayModal .modal-header{border-bottom: 0 !important; align-items: flex-start}
+.grayModal .modal-header .modal-title{text-align: center; line-height: normal}
+.grayModal .modal-header .modal-title img{display: block; margin: 0 auto -10px; width: 80%;}
+.grayModal .modal-header button{padding: 0; margin: 0;}
+.grayModal .modal-body{padding: 1rem 5rem;}
+.grayModal .modal-body .inputBox .sm_input{margin-bottom: 2%}
+.grayModal .modal-body .btn{width: 100%; color: #fff;}
+.grayModal .modal-body .passwordBtn{float: right; padding-top:0; width: auto; text-align: right;}
+.grayModal .modal-body .passwordBtn a{color: #707070; font-size: 0.75rem; color: #555555}
+
+.grayModal table{width: 100%; border: 1px solid #ccc; background-color: #fff; border-radius: 4px;}
+.grayModal table, .grayModal tr, .grayModal td{border: 1px solid #ccc}
+.grayModal td{padding: 3% 0; text-align: center; font-size: 0.82rem}
+
+.complete_container .grayModal .modal-body{padding: 1rem;}
+
+.checkBottom{display: flex; flex-direction: row; justify-content: space-between;}
+.datePicker.datepickerOn{display: block !important;}
+.checkSelect.checkselectOn{display: block !important;}
+
+.datePicker{display: none; width: 70% !important; border: 1px solid #ccc; border-radius: 4px; position: relative; z-index: 1; height: 390px; background-color: #fff; box-shadow: 0 5px 3px rgb(0 0 0 / 30%);} /* padding: 1.5%; */
+
+.datePicker::after{content: ''; display: block; clear: both;}
+
+.datePicker .notice{padding: 1% 1.5%; color: #888; font-size: 1.3rem;}
+.datePicker .selectDate{padding: 1% 1.5%; background-color: rgb(250, 245, 202) }
+
+
+.datePicker .smPickerBox{ padding: 1% 1.5%; height: 100%}
+.datePicker .smPickerBox::after{content: ''; display: block; clear: both;}
+.datePicker .smPickerBox .prevDate{margin-right: 4%}
+.datePicker .smPickerBox .prevDate, .datePicker .smPickerBox .nextDate{float: left; width: 48%; height: 100%;}
+.datePicker .smPickerBox .prevDate #cal_div, .datePicker .smPickerBox .nextDate #cal_div{height: 100%}
+#dateSelect, #dateSelect .div, #dateSelect .div .popupContents, #dateSelect .div .popupContents .calBlock, #dateSelect .div .popupContents .calBlock .calBox{height: 100%}
+#dateSelect .monArea{height: 10%;}
+#dateSelect .calendar{height: 90%;}
+
+.datePicker .monArea::after{content: ''; display: block; clear: both;}
+.datePicker .monArea button{float: left; width: 10%;}
+.datePicker .monArea .yearMonth{float: left; width: 80%; text-align: center;}
+
+.datePicker .calendar{width: 100%;}
+.datePicker .monArea{padding: 2% 0;}
+.datePicker th{padding: 2% 0; color: #aaa;}
+.datePicker td{text-align: center;}
+.datePicker td button{width: 100%; height: 100%;}
+.datePicker td button:hover{background-color: #EE7500; color: #fff !important;}
+.datePicker td button div{width: 100%; height: 100%;}
+.datePicker td button div span{display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;}
+
+.datePicker td button div span.impossible{position: relative; opacity: 0.4; }
+.datePicker td button div span.impossible::after{
+position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+content:'';display: block; width: 60%; height: 1px; background-color: #707070}
+
+
+.impossible{position: relative; opacity: 0.4; }
+.impossible::after{
+position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+content:'';display: block; width: 60%; height: 1px; background-color: #707070}
+
+.date_checkSelect{display: flex; flex-direction: row; justify-content: space-between; align-items: center;background-color: #FCFCFC;
+border: 1px solid #ccc; height: 24px}
+.date_checkSelect span{padding: 0 12px;border-right: 1px solid #ccc;border-left: 1px solid #ccc;}
+.date_checkSelect button{height: 100%; padding: 0 7px}
+.date_checkSelect button img{display: block; width: 10px; height: 100%;}
+
+.datePicker2 thead th:first-of-type, .datePicker thead th:first-of-type{color: #FF4349 !important}
+.datePicker2 tbody tr td:first-of-type button span, .datePicker tbody tr td:first-of-type button span{color: #FF4349 !important}
+.datePicker2 thead th:last-of-type, .datePicker thead th:last-of-type{color: #0080ff !important}
+.datePicker2 tbody tr td:last-of-type button span, .datePicker tbody tr td:last-of-type button span{color: #0080ff !important}
+
+.checkBottom{height: 0;}
+
+.modal .btn{padding: 0.375rem 0.75rem;}
+
+.checkBottom .inner{height: 100%;}
+.checkBottom .bigboxInner{display: flex;flex-direction: row; justify-content: space-between; width: 85%; height: 100%;}
+.checkBottom .inner .checkSelect{display: none; width: 30%;}
+.checkBottom .inner .checkSelect table{width: 100%; height: 100%;}
+.checkBottom .inner .checkSelect table tr,.checkBottom .inner .checkSelect table td{border: 1px solid #ccc;}
+
+.checkBottom .inner .checkSelect table tr td{text-align: center; font-size: 0.88rem; color: #555;}
+.checkBottom .inner .checkSelect table tr td img{display: inline-block; padding-right: 2%;}
+.checkBottom .inner .checkSelect table tr td .smGWrap{display: flex; flex-direction: row; justify-content: center; align-items: center;}
+.checkBottom .inner .checkSelect table tr td .smGWrap button img{display: block; width: 100%;}
+.checkBottom .inner .checkSelect table tr td .smGWrap input{width: 50%; text-align: center; color: #555;}
+
+.datePicker2{
+transform: translateY(100vh); transition: 0.3s;
+position: fixed; z-index: 5; min-width: 100vw; background-color: #fff; min-height: 100vh;}
+.datePicker2.dateOn{position: relative; z-index: 999;transform: translateY(0);}
+
+.datePicker2 .dateTop header{position: static; border-bottom: 1px solid #ebebeb;}
+.datePicker2 .dateTop header .headerRight{color: #666; font-size: 0.75em}
+.datePicker2 .dateTop .dateNotice{padding: 3% 20px; font-size: 0.75em;}
+.datePicker2 .dateTop .dayofWeek{display: flex; flex-direction: row; justify-content: space-between; padding: 20px 20px;}
+.datePicker2 .dateTop .dayofWeek li{width: 14.285%; text-align: center; color: #666; font-size: 3.8vw}
+.datePicker2 .dateTop .dayofWeek li:first-of-type{color: #FF4349 !important}
+.datePicker2 .dateTop .dayofWeek li:last-of-type{color: #0080ff !important}
+
+.datePicker2 .datemonth_wrap{overflow: scroll}
+.datePicker2 .datemonth_wrap .dateMonth{padding: 8% 20px 0; width: 100%; height: 75%;}
+.datePicker2 .datemonth_wrap .dateMonth:first-of-type{padding-top: 0;}
+.datePicker2 .datemonth_wrap .dateMonth #cal_div{height: 100%;}
+.datePicker2 .datemonth_wrap .dateMonth #cal_div #dateSelect{height: 100%;}
+.datePicker2 .datemonth_wrap .dateMonth #cal_div #dateSelect .div{height: 100%;}
+.datePicker2 .datemonth_wrap .dateMonth #cal_div #dateSelect .div .popupContents{height: 100%;}
+.datePicker2 .datemonth_wrap .dateMonth #cal_div #dateSelect .div .popupContents .calBlock{height: 100%;}
+.datePicker2 .datemonth_wrap .dateMonth #cal_div #dateSelect .div .popupContents .calBlock .calBox{height: 100%;}
+.datePicker2 .datemonth_wrap .dateMonth #cal_div #dateSelect .div .popupContents .calBlock .calBox .monArea{height: 8%;}
+.datePicker2 .datemonth_wrap .dateMonth #cal_div #dateSelect .div .popupContents .calBlock .calBox .monArea .yearMonth{height: 10%;}
+.datePicker2 .datemonth_wrap .dateMonth #cal_div #dateSelect .div .popupContents .calBlock .calBox .calendar{height: 92%;}
+
+.datePicker2 .datemonth_wrap .dateMonth table{width: 100%;}
+.datePicker2 .datemonth_wrap .dateMonth table tr td{text-align: center;}
+
+.datePicker2 .datemonth_wrap .dateMonth table tr td button{width: 100%; height: 100%;}
+
+.datePicker2 .dateBtn{padding: 10px 20px; height: 68px;}
+.datePicker2 .dateBtn button{width: 100%; height: 100%; background-color: #EE7603; color: #fff; border-radius: 8px; font-size: 0.94em;}
+
+@media screen and (max-width: 1200px){
+	.checkWrap{padding: 0 20px; margin: 1% auto 0; width: 100%;}
+	.container .inner{width: 100%; padding: 0 40px;}
+	.checkBottom{padding: 0 2%; width: 100%;}
+	.checkBottom .inner{padding: 0;}
+}
+@media screen and (max-width: 840px){
+	html{font-size: 14px;}
+	#mainPage .pannel .pannel_item{height: 160px}
+	.checkBottom{height: 250px;}
+
+	.checkWrap.main_checkWrap{flex-direction: column; justify-content: space-between; height: auto;}
+	.checkWrap .checkBtn{width: 100%;}
+	.checkWrap .checkInfo{margin-bottom: 2%; flex-direction: column; width: 100%;}
+
+	.checkWrap .checkInfo .checkLeft, .checkWrap .checkRight{padding: 2%; height: 90px}
+	.checkWrap .checkRight{width: 100%;}
+	.checkWrap .checkInfo .checkLeft{border-bottom: 1px solid #ccc; width: 100%;}
+
+	.checkWrap .checkInfo .checkInout{display: flex; flex-direction: row; align-items: center; }
+	.checkDate{display: flex;align-items: center; }
+	.checkWrap .checkInfo .checkRight{width: 60% ;}
+}
+@media screen and (max-width: 768px){
+	#mainPage .pannel .pannel_item{height: 140px; width: 100%; border-radius: 15px; box-shadow: 0px 5px 15px 0 rgba(42, 49, 58, 0.15); padding: 1rem;}
+}
+@media screen and (max-width: 680px){
+	.check img{display: block; width: 15px;}
+	.checkBottom img{display: block; width: 15px;}
+	.checkBottom{height: 230px;}
+}
+
+@media screen and (max-width: 540px){
+	html{font-size: 11px;}
+	.container .inner{width: 100%; padding: 0 20px;}
+	.content.inner{padding: 2%}
+	.progressWrap{display: none}
+	.check img{display: block; width: 10px;}
+	.checkBottom img{display: block; width: 10px;}
+	.checkBottom .inner{padding: 0;}
+	.checkWrap .checkInfo .checkRight{width: 90% ;}
+	.tab{height: 30px;}
+	#mainPage .pannel .pannel_item .info{padding: 5% 0; height: 100%;}
+}
+
+@media screen and (max-width: 480px){
+	html{font-size:14px;}
+	.h1_span{display: none}
+	header .inner > div:first-of-type{width: 70%;}
+	header .inner > div button{padding: 0;}
+	.tab button{width: 20%;}
+
+	#mainPage .general .general_item .infoBtn .roomPrice{width: 100%;}
+	#mainPage .general .general_item .infoBtn .btn{padding: 0; width: 49%;}
+
+	#mainPage .pannel .pannel_item{flex-direction: column;margin-bottom: 5%; height: auto; border-bottom: 0;}
+	#mainPage .pannel .pannel_item .pic{width: 100%; height: 150px}
+	#mainPage .pannel .pannel_item .info{width: 100%;}
+	#mainPage .pannel .pannel_item .infoBtn{display: block; width: 100%}
+}
+
+@media screen and (max-width: 380px){
+	.tab button{width: 30%;}
+}
+
+#packageDetail ul{padding-left: 0;}
+.modal ul{padding-left: 0;}
+#packageDetail h2{font-size: 1.3rem; text-align: center; padding: 30px 0; margin-bottom: 40px; border-bottom: 1px solid #ccc;}
+#packageDetail .wrap{display: flex; flex-direction: row;}
+#packageDetail .wrap.wrap2{padding-top: 5%; flex-direction: column;}
+#packageDetail .wrap.wrap2 dt{font-size: 1rem; font-size: bold;}
+#packageDetail .wrap.wrap2 dd{padding-top: 5px; font-size: 0.88rem; text-indent: 1rem;}
+
+
+
+#packageDetail .wrap .pic{width: 30%;}
+#packageDetail .wrap .pic .vi_img_bx{padding-right: 0; display: block; overflow: visible}
+#packageDetail .wrap .pic .vi_img_bx .bimg{height: 180px;}
+#packageDetail .wrap .pic .vi_img_bx .bimg img{display: block; width: 100%; height: 100%;}
+
+#packageDetail .wrap .pic .vi_img_bx .simg_li{margin-top: 0; height: 64px; overflow: visible}
+
+#packageDetail .wrap .pic .vi_img_bx .simg_li ul{margin-top: 2%; width: 100%; height: 100%; font-size: inherit}
+#packageDetail .wrap .pic .vi_img_bx .simg_li ul::after{content:''; display: block; clear: both;}
+#packageDetail .wrap .pic .vi_img_bx .simg_li ul li{float: left; width: 32%; height: 100%; margin-right: 2%; padding: 0; display: block; overflow: hidden;}
+#packageDetail .wrap .pic .vi_img_bx .simg_li ul li:last-of-type{margin-right: 0;}
+#packageDetail .wrap .pic .vi_img_bx .simg_li ul li img{display: block; width: 100%; height: 100%; border: 0;}
+
+#packageDetail .wrap .info{padding: 0 0 0 2%; width: 70%; display: flex; flex-direction: column; justify-content: space-between;}
+
+#packageDetail .txtWrap.column_txtWrap{flex-direction: column}
+#packageDetail .wrap .info .txtWrap.txtBetween{width: 100%; padding-bottom: 23px; border-bottom: 1px solid #ccc;}
+#packageDetail .wrap .info .txtWrap.txtBetween .infoBtn{
+display: flex; flex-direction: row; justify-content: flex-end; align-items: flex-end; width: 100%;
+}
+#packageDetail .wrap .info .txtWrap.txtBetween .infoBtn .roomPrice{margin-right: 2%; width: 31.333%; text-align: right; font-weight: bold; font-size: 1.38rem;}
+#packageDetail .wrap .info .txtWrap.txtBetween .infoBtn .roomPrice span.vat{font-size: 10px;font-weight: normal;}
+
+#packageDetail .wrap .info .txtWrap.txtBetween .infoBtn .roomPrice p{display: flex; flex-direction: row; justify-content: flex-end; align-items: center;}
+#packageDetail .wrap .info .txtWrap.txtBetween .infoBtn .roomPrice p span{margin-top: 3px; padding-left: 1%; display: inline-block; font-weight: normal; font-size: 13px;}
+
+#packageDetail .wrap .info .txtWrap.txtBetween .infoBtn .btn{margin-right: 2%; padding: 0; width: 31.333%; height: 40px; border: 1px solid #DDE4E8; text-align: center; font-size: 1rem; border-radius: 4px; line-height: 38px;}
+#packageDetail .wrap .info .txtWrap.txtBetween .infoBtn .btn:nth-of-type(2){margin-right: 0;}
+#packageDetail .wrap .info .txtWrap.txtBetween .infoBtn .btn{color: #555;}
+#packageDetail .wrap .info .txtWrap.txtBetween .infoBtn .btn.roomSelect{background-color: #EE7500; color: #fff;}
+#packageDetail .wrap .info .txtWrap.txtBetween .infoBtn .btn.roomSelect a{display: block; width: 100%; height: 100%;}
+
+#packageDetail .wrap2 p{font-size: 0.9rem; padding-bottom: 3px;}
+#packageDetail .wrap2 .subtxtWrap{padding-top: 50px}
+
+#packageDetail .txtWrap.txtBetween{align-items: flex-start !important}
+#packageDetail .txtWrap.txtBetween .txtName{width: auto; font-weight: 400} /* font-size: 1.13rem; */
+
+@media screen and (max-width: 1200px){
+#packageDetail .wrap .pic{width: 340px;}
+#packageDetail .wrap .info{width: calc(100% - 340px);}
+#packageDetail .wrap .info{padding-right: 0;}
+#packageDetail .txtWrap:last-of-type{flex-direction: column}
+#packageDetail .wrap .info .txtWrap.txtBetween .infoBtn{width: 100%}
+
+}
+@media screen and (max-width: 840px){
+	html{font-size: 14px;}
+
+	.checkBottom{height: 250px;}
+	#packageDetail .wrap .info .txtWrap.txtBetween .infoBtn{display: block;}
+	#packageDetail .wrap .info .txtWrap.txtBetween .infoBtn .roomPrice{width: 100%}
+	#packageDetail .wrap .info .txtWrap.txtBetween .infoBtn .btn{width: 49%}
+	#packageDetail .wrap .info .txtWrap.txtBetween .infoBtn .btn.roomSelect{float: right;}
+
+	.grayModal .modal-dialog, .modal-dialog{min-width: auto;}
+}
+@media screen and (max-width: 768px){
+	#packageDetail .wrap .pic{width: 50%;}
+	#packageDetail .wrap .info{width: 50%;}
+	#mainPage .inner.content section{padding:0 10px;}
+}
+@media screen and (max-width: 680px){
+	.check img{display: block; width: 15px;}
+	.checkBottom img{display: block; width: 15px;}
+	.checkBottom{height: 230px;}
+	#packageDetail .wrap .pic .vi_img_bx .bimg{height: 140px;}
+}
+
+@media screen and (max-width: 540px){
+	.container .inner{width: 100%; padding: 0 10px;}
+	.content.inner{padding: 1% 2%}
+	.progressWrap{display: none}
+	.check img{display: block; width: 10px;}
+	.checkBottom img{display: block; width: 10px;}
+	.checkBottom .inner{padding: 0;}
+
+	.tab{height: auto; padding: 0 12px;}
+}
+
+@media screen and (max-width: 480px){
+	.checkBottom{display: none;}
+	#packageDetail .wrap{flex-direction: column;}
+	#packageDetail .wrap .pic{width: 100%;}
+	#packageDetail .wrap .pic .vi_img_bx{display: flex; flex-direction: row; justify-content:space-between; height: 180px}
+	#packageDetail .wrap .pic .vi_img_bx .bimg{width: 78%; height: 100%;}
+	#packageDetail .wrap .pic .vi_img_bx .simg_li{flex-direction: column; width:20%; height: 100%}
+	#packageDetail .wrap .pic .vi_img_bx .simg_li ul{flex-direction: column; margin-top: 0; height: 100%;}
+	#packageDetail .wrap .pic .vi_img_bx .simg_li ul li{margin: 0 0 8% 0 ; width: 100%; height: 32%}
+	#packageDetail .wrap .pic .vi_img_bx .simg_li ul li:last-of-type{margin-bottom: 0;}
+	#packageDetail .wrap .pic .vi_img_bx .simg_li ul li img{height: 100%}
+
+	#packageDetail .wrap .pic .vi_img_bx .simg_li ul::after{display: none}
+
+	#packageDetail .wrap .info{padding: 0; width: 100%;}
+
+	#packageDetail .txtWrap{padding-top: 10px;}
+	#packageDetail .wrap .info .txtWrap.txtBetween{padding-top: 10px;}
+	#packageDetail .wrap.wrap2{padding-top: 23px;}
+}
+
+@media screen and (max-width: 380px){
+	#packageDetail .wrap .pic .vi_img_bx{margin-bottom: 10px; height: 140px}
+}
+
+#packageReservation h4{color: #333}
+#packageReservation .rule{display: none; margin-bottom: 5%; padding: 5%; height: 180px; overflow-Y: scroll; border-radius: 8px; border: 2px solid #ebebeb}
+#packageReservation .rule p{font-size: 0.7em; color: #666;}
+#packageReservation .rule.ruleOn{display: block !important;}
+
+#packageReservation .labelWrap {margin-bottom: 5px; display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start;}
+#packageReservation .inputBox{margin-top: 12px}
+#packageReservation .inputBox:first-of-type{margin-top: 0;}
+
+#packageReservation .checkWrap{display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin: 1% auto 0; width: 1200px;}
+#packageReservation .checkWrap .checkInfo{
+display: flex; flex-direction: row; justify-content: space-between; align-items: center;
+width: 85%; height: 100%; border: 1px solid #ccc; background-color: #fff;border-radius: 4px
+}
+
+#packageReservation section.paymentMethod .noticeWrap{padding: 3% 3% 3% 6%; background-color: #F9F9F9; border-radius: 4px;}
+#packageReservation section.paymentMethod .noticeWrap input {margin-top: 2px;}
+#packageReservation section.consent .noticeWrap span{margin: 3px 2% 0 0}
+
+#packageReservation .payBtn{height: 50px; background-color: #EE7500; border-radius: 4px; overflow: hidden;}
+#packageReservation .payBtn a{display: block; width: 100%; height: 100%; color: #fff; text-align: center; line-height: 50px;}
+
+#packageReservation .consent h4 + .notice{padding: 2%;}
+#packageReservation .reservationInfo .checkLeft, #reservation_complete .reservationInfo .checkLeft{border-left: 0; border-right: 0;}
+
+#packageReservation .inputBox:nth-of-type(2) .sm_input > input{width: 100%;}
+
+#reservation_complete h4,#packageReservation h4{padding-bottom: 2%;}
+#reservation_complete .paybtnBox .payBtn{width: 49%;}
+
+.confirm_container h4{margin-bottom: 20px; padding: 0 1% 10px; border-bottom: 1px solid #ccc;}
+.confirm_container .reservationInfo_inner{padding: 2%; box-shadow: 0px 3px 6px #00000029 }
+.confirm_container .reservationInfo_top{
+display:flex; flex-direction: row; justify-content: space-between;
+padding-bottom: 2%; border-bottom: 1px solid #ccc;}
+.confirm_container .reservationInfo_top .reservationInfo_left{display:flex; flex-direction: row; justify-content: flex-start; width: 60%; font-size: 1rem;}
+.confirm_container .reservationInfo_top .reservationInfo_left p + span{display: block; padding: 0 2%;}
+
+.confirm_container .reservationInfo_inner .checkinfoWrap{display: flex; flex-direction: row; justify-content: space-between; padding: 2% 0; height: 140px;}
+.confirm_container .reservationInfo_inner .checkinfoWrap .checkInfo{
+display:flex; flex-direction: column; justify-content: space-between;
+width: 80%; font-size: 1rem !important} /* font-size: 0.88rem !important */
+.confirm_container .reservationInfo_inner .checkinfoWrap .payBtn.orangeBtn{width: 20%}
+
+.confirm_container section::after{content: ''; display: block; clear: both;}
+
+.confirm_container section.reservationInfo .packageName{padding: 0;}
+.confirm_container section.reservationInfo h5{padding: 0;}
+.confirm_container section.reservationInfo h5,.confirm_container h4{font-weight: bold; font-size: 0.94rem}
+.confirm_container section.reservationInfo .checkLeft{border: 0; width: 60%; height: auto;}
+.confirm_container section.reservationInfo .checkLeft .check.day{width: 17%; border-left: 1px solid #ccc; border-right: 1px solid #ccc; background-color: transparent;}
+.confirm_container section.reservationInfo .checkLeft .check.day p{color: #EE7500; line-height: normal}
+.confirm_container section.reservationInfo .checkLeft .check{flex-direction: row; justify-content: flex-start; width: auto}
+
+.confirm_container section.reservationInfo .checkRight{padding:0 }
+
+.confirm_container .reservationInfo_inner .payBtn.orangeBtn{height: 100%;}
+.confirm_container .reservationInfo_inner .payBtn.orangeBtn a{display: flex; justify-content: center; align-items: center;}
+
+.confirm_container section.reservationInfo .totalPay{margin-top: 0; padding: 2% 0 0;}
+
+.confirm_container .txtWrap{padding-top: 15px}
+.confirm_container .txtWrap:first-of-type{padding-top: 0;}
+
+.confirm_container .paybtnBox{justify-content: center}
+.confirm_container .paybtnBox .payBtn{width: 30%;margin-right: 1%}
+.confirm_container .paybtnBox .payBtn:last-of-type{margin-right: 0;}
+
+.confirm_container .paybtnBox .payBtn_sub{width: 30%;margin-right: 1%}
+.confirm_container .paybtnBox .payBtn_sub:last-of-type{margin-right: 0;}
+
+.confirm_container section.reservationInfo .totalPay .totalPay_price{width: 100%}
+.confirm_container section.reservationInfo .totalPay .totalPay_price > strong{font-size: 1.2rem}
+
+.confirm_container section.payInfo .txtName{margin-right: 0; text-align: right;}
+.confirm_container section.payInfo .txt{width: 25%; text-align: right;}
+.confirm_container section.payInfo .txtWrap{justify-content: flex-end}
+.confirm_container section.payInfo .total{font-size: 0.8rem !important;}
+
+.confirm_container section.payInfo .total .txt span{font-weight: bold;font-size: 1.2rem; color: #0A0A0A}
+.confirm_container .btn{float: right; width: 120px; height: 42px; border-radius: 4px; }
+.confirm_container .btn a{display: block; width: 100%; height: 100%; text-align: center; line-height: 40px;}
+
+.confirm_container .checkboxWrap .checkLi label{justify-content: center !important}
+
+.confirm_container .payBtn.bd-example{height: 100%;}
+.confirm_container .payBtn.bd-example button{width: 100%; height: 100%; color: #fff; font-size: 16px;}
+
+.confirm_container .modal_2 h5{ font-size: 0.88rem}
+.confirm_container .modal_2 h5 img{display: block; margin-bottom: 20px}
+.confirm_container .modal_2 .btn{width: 100%; padding: 0;}
+.confirm_container .modal_2 .modal-body{padding: 1rem 5rem;}
+
+
+@media screen and (max-width: 1200px){
+	.confirm_container section.reservationInfo .checkLeft{width: 70%}
+	.confirm_container section.reservationInfo .checkLeft .check.day{width: 12%}
+}
+@media screen and (max-width: 980px){
+	.confirm_container section.reservationInfo .checkLeft{width: 80%}
+	.confirm_container .reservationInfo_top .reservationInfo_left{width: 80%;}
+}
+@media screen and (max-width: 840px){
+	.confirm_container .reservationInfo_inner .checkinfoWrap .checkInfo{width: 100%;}
+	.confirm_container section.reservationInfo .checkLeft{width: 60%; border-radius: 4px 4px 0 0;}
+	.confirm_container section.reservationInfo h5, .confirm_container h4{font-size:1.1rem}
+	.confirm_container section.reservationInfo h5{margin-bottom: 0.5rem}
+	.confirm_container .reservationInfo_inner .checkinfoWrap{flex-direction: column; height: auto;}
+	.confirm_container section.reservationInfo .checkRight{ padding: 0.5rem 0;}
+	.confirm_container .reservationInfo_inner .checkinfoWrap .payBtn.orangeBtn{margin-top: 0.5rem;}
+	section.reservationInfo .check .checkInout img{width: 10px}
+	section.reservationInfo .checkRight .check img{width: 10px;}
+	.complete_container .labelWrap{padding-bottom: 0}
+}
+@media screen and (max-width: 768px){
+	.confirm_container section.reservationInfo .checkLeft{width: 70%}
+}
+@media screen and (max-width: 680px){
+	.confirm_container .reservationInfo_top .line{display: none !important;}
+	.confirm_container .reservationInfo_top .reservationInfo_left{width: 85%;}
+	.confirm_container section.reservationInfo .checkLeft{width: 100%}
+	.confirm_container .reservationInfo_inner .checkinfoWrap .payBtn.orangeBtn{width: 100%}
+	.confirm_container .reservationInfo_top .reservationInfo_left{flex-direction: column;}
+
+	section.reservationInfo .reservationInfo_inner{padding: 4%;}
+	.confirm_container .paybtnBox{justify-content: space-between; margin: 6% 0; height: 40px}
+	.confirm_container .paybtnBox .payBtn{width: 31.333%}
+	.confirm_container .paybtnBox .payBtn_sub{width: 50%}
+	.paybtnBox .payBtn_sub a{line-height: 38px; font-size: 0.88rem}
+	.paybtnBox .payBtn a{line-height: 38px; font-size: 0.88rem}
+	.confirm_container section.payInfo .txtWrap{width: 100%}
+
+	section.reservationInfo .totalPay{border-top: 0;}
+	#packageReservation .reservationInfo .checkLeft, #reservation_complete .reservationInfo .checkLeft{border: 1px solid #ccc; border-radius: 4px 4px 0 0;}
+}
+
+@media screen and (max-width: 540px){
+	.confirm_container .reservationInfo_top .reservationInfo_left{width: 80%;}
+	.reservation_status{height: 20px;}
+}
+
+@media screen and (max-width: 480px){
+	.confirm_container .reservationInfo_top{border-bottom: 0;}
+	.confirm_container section.reservationInfo .checkLeft{height: 66px; border: 1px solid #ccc;}
+	.confirm_container section.reservationInfo .checkLeft .check{flex-direction: column; width: 45%;}
+	.confirm_container section.reservationInfo .checkLeft .check.day{width: 15%; height: 100%;}
+	.confirm_container section.reservationInfo .checkLeft .check.day p{height: 100%; color: #fff; background-color: #EE7500; line-height: 64px}
+
+	.confirm_container section.reservationInfo .checkLeft .check .checkDate{flex-direction: column;}
+	.reservationInfo_top .reservation_status{margin-left: 0;}
+	.confirm_container .reservationInfo_top .reservationInfo_left > p{margin-bottom: 0.5rem; display: flex; flex-direction: column; }
+	section.reservationInfo .checkRight{justify-content: center;border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; border-radius: 0 0 4px 4px}
+
+	.confirm_container .infoWrap{padding-top: 20px}
+
+	.confirm_container section.reservationInfo .checkRight{border-bottom: 1px solid #ccc; border-right: 1px solid #ccc; border-left: 1px solid #ccc;border-radius: 0 0 4px 4px;}
+	section.reservationInfo .checkLeft{border-radius: 4px 4px 0 0; overflow: hidden}
+}
+
+.changeInformation .userInfo .inputBox .sm_input input,.changeInformation .userInfo .inputBox .sm_input select{border: 1px solid #ccc; border-radius: 4px; width: 31%; height: 100%;}
+.changeInformation .userInfo .email_input{display: flex; flex-direction: row; justify-content: space-between; align-items: center;}
+.changeInformation .userInfo textarea{padding: 2%;}
+
+.changeInformation .userInfo input, changeInformation .userInfo select{font-size: 0.88rem; font-weight: 300}
+.planningStay h4{margin-bottom: 0 !important; border-bottom: 0 !important;}
+
+.layer_wrap,.move_layer_wrap {display: none; position: fixed; left: 0; right: 0; bottom: 0; top: 0; z-index: 9999; opacity: 0; animation: fade-out 0.2s;}
+.layer_inner {position: absolute; left: 50%; top: 50%; width: 511px; transform: translate(-50%, -50%); z-index: 1;}
+.layer_wrap.is_show, .move_layer_wrap.is_show {display: block; animation: fade-in 0.2s; opacity: 1;}
+.layer_wrap:before {display: block; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); content: '';}
+.move_layer_wrap:before {display: block; width: 100%; height: 100%; content: '';}
+.layer_loading .layer_content {padding: 85px 0 74px; text-align: center;}
+.layer_loading .layer_content {padding: 85px 0 74px; text-align: center;}
+.layer_loading .layer_content .box_img img {width:100px;}

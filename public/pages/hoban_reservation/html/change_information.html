@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <link rel="stylesheet" href="https://main.roomio.co.kr/theme/basic/style.css?ver=20211213160611">
+  <link rel="stylesheet" href="../bootsstrap/boots.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../js/main.js"></script>
+  <title>리솜리조트</title>
+  <style>
+    table {
+      border-collapse: collapse
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container complete_container changeInformation confirm_container" id="change_information">
+    <header>
+      <div class="inner">
+        <div>
+          <div class="logo"><a href="../html/main.html"><img src="../img/logo.svg"></a></div>
+          <h1>레스트리/포레스트 리솜</h1>
+        </div>
+        <div class="bd-example">
+          <button type="button" class="headerBtn btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">예약조회</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="inner">
+      <div class="wrap">
+        <section class="reservationInfo">
+          <h4>예약확인</h4>
+          <div class="reservationInfo_inner">
+            <div class="reservationInfo_top">
+              <div class="reservationInfo_left">
+                <p><span>예약번호</span>0413000127 / 0413000127-874598</p>
+                <p><span>예약일</span>2021년 12월 01일(수)</p>
+              </div>
+              <p class="reservation_status statusOrange">정상예약</p>
+            </div>
+            <div class="checkinfoWrap">
+              <div class="checkInfo">
+
+                <h5>[포레스트] S25빌라형 (기준5/최대5)</h5>
+                <div class="checkLeft">
+                  <div class="check">
+                    <div class="checkInout">
+                      <img src="../img/in.svg">
+                      <p class="checkLabel">체크인</p>
+                    </div>
+                    <p class="checkDate"><span class="year">2021</span> 12/08(화)&nbsp;15:00</p>
+                  </div>
+                  <div class="check day">
+
+                    <p class="">1박</p>
+                  </div>
+                  <div class="check">
+                    <div class="checkInout">
+                      <img src="../img/in.svg">
+                      <p class="checkLabel">체크아웃</p>
+                    </div>
+                    <p class="checkDate"><span class="year">2021</span> 12/08(화)&nbsp;12:00</p>
+                  </div>
+                </div>
+                <div class="checkRight">
+                  <div class="check">
+                    <img src="../img/rooms.svg">
+                    <p class="checkLabel">객실<span>1</span></p>
+
+                  </div>
+                  <div class="check">
+                    <img src="../img/user.svg">
+                    <p class="checkLabel">인원<span>2</span></p>
+
+                  </div>
+                  <div class="check">
+                    <p class="checkLabel">(성인2/아동0)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="payBtn orangeBtn">
+                <a href="./reservation_confirm.html">예약 상세 보기</a>
+              </div>
+            </div>
+            <div class="totalPay">
+
+              <div class="totalPay_price"><span class="vat">총 금액</span><strong class="">409,000</strong><span class="won">원</span></div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div class="wrap infoWrap">
+        <section class="roomInfo">
+          <h4>객실정보<p class="reservation_status statusOrange">정상예약</p>
+          </h4>
+          <div class="txtWrap">
+            <h5 class="txtName">객실타입</h5>
+            <p class="txt">S25빌라형 - 해브나인패키지</p>
+          </div>
+          <div class="txtWrap">
+            <h5 class="txtName">투숙인원</h5>
+            <p class="txt">성인 2, 아동 0</p>
+          </div>
+          <div class="txtWrap">
+            <h5 class="txtName">추가옵션</h5>
+            <p class="txt">없음</p>
+          </div>
+          <div class="txtWrap">
+            <h5 class="txtName">무료취소기한</h5>
+            <p class="txt">2022-01-22 24:00</p>
+          </div>
+
+        </section>
+        <section class="userInfo wrap_container">
+          <h4>고객정보</h4>
+          <div class="inner">
+            <div class="wrap">
+              <div class="inputBox">
+                <div class="labelWrap"><label>투숙객명</label></div>
+                <div class="sm_input">
+                  <input type="text" placeholder="성함을 입력해주세요" value="홍길동"> <!-- <img class="dotRed" src="../img/Essential_Filled_16.svg"> -->
+                </div>
+              </div>
+              <div class="inputBox">
+                <div class="labelWrap">
+                  <label>휴대폰번호</label>
+                </div>
+                <div class="sm_input">
+                  <input type="text" placeholder="성함을 입력해주세요" value="010-0000-0000">
+                </div>
+              </div>
+              <div class="inputBox">
+                <div class="labelWrap"><label>이메일주소</label></div>
+                <div class="sm_input email_input">
+                  <input type="text" placeholder="" value="test">
+                  <span>@</span>
+                  <input type="text" placeholder="" value="gmail.com">
+                  <select>
+                    <option>직접입력</option>
+                    <option>naver</option>
+                    <option>직접입력</option>
+                    <option>직접입력</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="wrap">
+              <div class="inputBox">
+                <div class="labelWrap"><label>이메일주소</label></div>
+
+                <textarea>체크인 6시로 미뤄주세요.</textarea>
+
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <div class="paybtnBox">
+          <div class="payBtn grayBtn"><a href="./main.html">리스트로 돌아가기</a></div>
+          <div class="payBtn orangeBtn"><a href="">정보 변경하기</a></div>
+        </div>
+      </div>
+    </div> <!-- inner끝 -->
+  </div>
+
+  <footer>
+    <div class="inner">
+      <div class="footerLogo"><img src="../img/logo.svg"></div>
+      <p class="txt">(주)호반호텔&리조트 대표자 : 이정호 대표전화 : 1600-0060<br>주소 : 충청북도 제천시 백운면 금봉로365<br>사업자번호 : 30581263213 사업자번호 : 30581263213<br><b class="copyrignt">COPYRIGHT(C) HOBAN HOTEL & RESORT. ALL RIGHTS RESERVED.</b></p>
+    </div>
+  </footer>
+</body>
+</html>

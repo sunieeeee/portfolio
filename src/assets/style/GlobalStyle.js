@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
-import * as colors from './colors';
+import * as colors from "./colors";
 import reset from "styled-reset";
 
-import mq from './MediaQuery';
+import mq from "./MediaQuery";
 
 const GlobalStyle = createGlobalStyle`
     /** reset.css */
