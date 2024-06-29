@@ -3,12 +3,20 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import dataset from "../assets/dataset";
 import * as colors from "../assets/style/colors";
+import mq from "../components/MediaQuery";
 import PageTitle from "../components/PageTitle";
 
 const ProjectsContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+
+  ${mq.maxWidth("lg")`
+    grid-template-columns: repeat(2, 1fr);
+  `}
+  ${mq.maxWidth("md")`
+    grid-template-columns: repeat(1, 1fr);
+  `}
 
   .box {
     position: relative;
@@ -177,7 +185,7 @@ const Projects = memo(() => {
               </span>
 
               <div className="short_desc">
-                <p>Publishing</p>
+                <p>{v.group}</p>
                 <h4>{v.title}</h4>
               </div>
 

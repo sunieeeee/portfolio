@@ -26,10 +26,20 @@ const PageTitleContainer = styled.div`
       transform: translateY(-50%);
       color: rgba(255, 255, 255, 0.07);
       z-index: -1;
+      animation: titleOn 0.8s 1 forwards;
     }
 
     span {
       color: ${colors.ORANGE};
+    }
+
+    @keyframes titleOn {
+      0% {
+        letter-spacing: 50px;
+      }
+      100% {
+        letter-spacing: 10px;
+      }
     }
   }
 `;   

@@ -1,6 +1,7 @@
 import React, {memo} from 'react';
 import styled from "styled-components";
 import * as colors from '../assets/style/colors';
+import mq from "../components/MediaQuery";
 import profileImage from "../assets/img/intro_picture.jpg";
 import PageBtn from '../components/PageBtn';
 
@@ -13,9 +14,16 @@ const MainContainer = styled.main`
   }
 
   .left_wrap {
+    ${mq.maxWidth("lg")`
+      margin-bottom: 74px;
+    `}
+
     .box {
       position: relative;
       width: 400px;
+      ${mq.maxWidth("lg")`
+        width: 300px;
+      `}
 
       &::before {
         z-index: -1;
@@ -41,6 +49,11 @@ const MainContainer = styled.main`
     flex-direction: column;
     justify-content: center;
     padding-left: 10%;
+
+    ${mq.maxWidth("lg")`
+      padding-left: 0;
+    `}
+
     h3 {
       color: ${colors.WHITE};
       font-weight: 400;
@@ -78,10 +91,14 @@ const MainContainer = styled.main`
       gap: 20px;
       margin: 23px 0 30px;
 
+      ${mq.maxWidth("md")`
+        grid-template-columns: repeat(1, 1fr);
+      `}
+
       li {
         color: ${colors.ORANGE};
         font-weight: 500;
-        
+
         span {
           padding-right: 10px;
           color: ${colors.WHITE};

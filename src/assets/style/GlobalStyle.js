@@ -1,8 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import * as colors from "./colors";
+import mq from "../../components/MediaQuery";
 import reset from "styled-reset";
-
-import mq from "./MediaQuery";
 
 const GlobalStyle = createGlobalStyle`
     /** reset.css */
@@ -35,12 +34,18 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${colors.BLACK};
     };
 
+    
     a {
         text-decoration: none;
     }
     .inner {
         margin: auto;
         max-width: 1100px;
+        
+        ${mq.maxWidth("lg")`
+        flex-direction: column;
+        padding: 60px 50px 80px;
+        `}
     }
 
     section {

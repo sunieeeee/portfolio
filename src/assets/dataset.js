@@ -126,6 +126,7 @@ const dataset = {
         "메인 페이지, 메뉴 페이지, 소식 페이지, 커뮤니티 페이지, 매장안내 페이지",
       link: "https://paikdabang.vercel.app",
       github: "https://github.com/sunieeeee/paikdabang?tab=readme-ov-file",
+      group: "Frontend",
       view: [
         {
           name: "메인 페이지",
@@ -170,6 +171,50 @@ const dataset = {
       ],
     },
     {
+      title: "이미지 검색",
+      sub_title: "카카오 오픈 API를 이용한 이미지 검색",
+      period: " 2024.5.28~2024.6.8 (약 2주)",
+      desc: [
+        "카카오 오픈 API를 이용한 이미지 검색 기능을 구현하였습니다.",
+        "무한 스크롤(Infinity Scroll) 기능을 사용하여 사용자가 스크롤을 내리면 자동으로 더 많은 이미지 데이터를 불러오는 기능을 구현하였습니다.",
+      ],
+      tech: ["React", "Redux", "Axios", "SCSS"],
+      percent: "100%",
+      work_area: "검색 페이지",
+      link: "",
+      group: "Frontend",
+      view: [
+        {
+          name: "검색 기능",
+          img: "/img/projects/imageSearch/search.gif",
+        },
+        {
+          name: "무한 스크롤",
+          img: "/img/projects/imageSearch/infinite_scroll.gif",
+        },
+      ],
+    },
+    {
+      title: "일일 영화 검색",
+      sub_title: "영화진흥위원회 오픈 API를 이용한 일일 영화 검색",
+      period: " 2024.6.10~2024.6.22 (약 2주)",
+      desc: [
+        "영화진흥위원회 오픈 API를 이용한 일일 영화 검색 기능을 구현하였습니다.",
+        "초기값은 어제 날짜로 설정되어 있으며, 사용자가 날짜를 변경할 때마다 해당 날짜의 영화 순위 데이터를 조회되도록 구현하였습니다.",
+      ],
+      tech: ["React", "Redux", "Axios", "SCSS"],
+      percent: "100%",
+      work_area: "검색 페이지",
+      link: "",
+      group: "Frontend",
+      view: [
+        {
+          name: "날짜 선택 및 데이터 조회",
+          img: "/img/projects/movierank/MovieRank.gif",
+        },
+      ],
+    },
+    {
       title: "Mary's Forest",
       sub_title: "기업사이트 제작",
       period: "2022.05 ~ 2022.09 (5개월)",
@@ -182,6 +227,7 @@ const dataset = {
       work_area:
         "메인 페이지, 메리의 숲 이야기 페이지, 공간안내 페이지, 예약 페이지, 공지사항 페이지",
       link: "/pages/marysforest/main.html",
+      group: "Publishing",
       view: [
         {
           name: "메인 페이지",
@@ -218,6 +264,7 @@ const dataset = {
       work_area:
         "메인 페이지, 상품 상세 페이지, 상품 예약 페이지, 예약 완료 페이지, 상세 예약내역 확인 페이지, 고객정보 변경 페이지, 예약 취소 페이지, 전체 예약내역 페이지",
       link: "/pages/hoban_reservation/html/main.html",
+      group: "Publishing",
       view: [
         {
           name: "메인 페이지",
@@ -257,6 +304,7 @@ const dataset = {
       title: "대한상공회의소",
       sub_title: "중소기업 복지 플랫폼 제작",
       period: "2021.08~2021.10(3개월)",
+      group: "Publishing",
       desc: [
         "대한상공회의소의 중소기업복지플랫폼 입니다.",
         "헤더, 푸터를 제외한 컨텐츠 영역만 퍼블리싱을 하였고, IE에서도 문제없이 나오도록 구현하였습니다.",

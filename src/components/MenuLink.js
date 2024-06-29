@@ -2,13 +2,19 @@ import React, { memo, useState, useRef, useCallback, useEffect } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import * as colors from "../assets/style/colors";
-import mq from "../assets/style/MediaQuery";
+import mq from "../components/MediaQuery";
 
 const MenuContainer = styled.nav`
+  z-index: 1;
   position: fixed;
   left: 30px;
   top: 30px;
   height: initial;
+
+  ${mq.maxWidth("lg")`
+    left: auto;
+    right: 30px;
+  `}
 
   > div {
     position: relative;
@@ -115,6 +121,14 @@ const MenuContainer = styled.nav`
         opacity: 0;
         transition: 0.2s all;
 
+        ${mq.maxWidth("lg")`
+          right: 0;
+          left: auto;
+          transform: translate(30px, -50%);
+          padding: 0 120% 0 0;
+          text-align: left;
+        `}
+
         &.active {
           color: ${colors.ORANGE};
 
@@ -129,6 +143,11 @@ const MenuContainer = styled.nav`
             background-color: ${colors.ORANGE};
             opacity: 0;
             transition: 0.3s all;
+
+            ${mq.maxWidth("lg")`
+              right: 60px;
+              left: auto;
+            `}
           }
 
           & + i {
@@ -193,6 +212,11 @@ const MenuContainer = styled.nav`
             left: 57px;
             opacity: 1;
             transition-delay: 0.3s;
+
+            ${mq.maxWidth("lg")`
+              right: 57px;
+              left: auto;
+            `}
           }
 
           & + i {
@@ -212,7 +236,7 @@ const MenuContainer = styled.nav`
 const MenuLink = memo(({ to, children }) => {
   const menuIcon = useRef();
   const navList = useRef();
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = useCallback(() => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
@@ -250,8 +274,8 @@ const MenuLink = memo(({ to, children }) => {
               <i className="fa-solid fa-briefcase"></i>
             </li>
             <li>
-              <NavLink to="/blog">Blog</NavLink>
-              <i className="fa-solid fa-file-lines"></i>
+              <NavLink to="https://github.com/sunieeeee" target="_blank">Github</NavLink>
+              <i className="fa-brands fa-github"></i>
             </li>
           </ul>
         </div>
