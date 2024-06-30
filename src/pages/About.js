@@ -2,6 +2,7 @@ import React, {memo} from 'react';
 import styled from "styled-components";
 import * as colors from "../assets/style/colors";
 import mq from "../components/MediaQuery";
+import Meta from '../components/Meta';
 import PageTitle from '../components/PageTitle';
 import SubTitle from "../components/SubTitle";
 import dataset from "../assets/dataset";
@@ -222,6 +223,7 @@ const CareerContainer = styled.div`
 const About = memo(() => {
   return (
     <div className="inner">
+      <Meta title="leeyeonji : About" />
       <PageTitle leftText="About" rightText="Me" contentText="About Me" />
 
       <section>

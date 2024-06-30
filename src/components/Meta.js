@@ -59,16 +59,16 @@ const Meta = (props) => {
  * props에 대한 기본값 설정
  */
 Meta.defaultProps = {
-  title: 'React Example',
-  description: 'React.js 예제입니다.',
-  author: '이연지',
-  subject: 'React.js Frontend Programming',
-  copyright: 'Lee K.H',
-  keywords: 'React',
+  title: "leeyeonji",
+  description: "이연지의 포트폴리오입니다.",
+  author: "이연지",
+  subject: "leeyeonji's portfolio",
+  copyright: "Lee Y.J",
+  keywords: "Portfolio",
   url: window.location.href,
   image: null,
   icon: null,
   shortcutIcon: null,
   appleTouchIcon: null,
-}
+};
 export default Meta;

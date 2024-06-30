@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {useParams} from 'react-router-dom';
 
 import * as colors from "../assets/style/colors";
+import Meta from "../components/Meta";
 import PageTitle from "../components/PageTitle";
 import SubTitle from "../components/SubTitle";
 import PageBtn from "../components/PageBtn";
@@ -57,7 +58,6 @@ const DetailContainer = styled.div`
       b {
         display: inline-block;
         min-width: 3.3%;
-        /* padding-right: 20px; */
 
         i {
           color: ${colors.ORANGE};
@@ -138,6 +138,7 @@ const ProjectDetail = memo(() => {
 
   return (
     <article>
+      <Meta title={"leeyeonji : " + projectItem.title} />
       <DetailContainer className="inner">
         <PageTitle rightText={projectItem.title} contentText="Projects" />
         <SubTitle text={projectItem.sub_title} border="none" />
@@ -184,8 +185,22 @@ const ProjectDetail = memo(() => {
         </div>
 
         <div className="detail detail_btn">
-          {projectItem.link && (<PageBtn link={projectItem.link} leftText="PROJECT" rightText=": LINK"/>)}
-          {projectItem.github && (<PageBtn link={projectItem.github} leftText="GITHUB" rightText=": LINK"/>)}
+          {projectItem.link && (
+            <PageBtn
+              link={projectItem.link}
+              leftText="PROJECT"
+              rightText=": LINK"
+              target="_blank"
+            />
+          )}
+          {projectItem.github && (
+            <PageBtn
+              link={projectItem.github}
+              leftText="GITHUB"
+              rightText=": LINK"
+              target="_blank"
+            />
+          )}
         </div>
 
         <ul className="detail detail_view">

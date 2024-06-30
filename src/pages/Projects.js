@@ -4,6 +4,7 @@ import styled from "styled-components";
 import dataset from "../assets/dataset";
 import * as colors from "../assets/style/colors";
 import mq from "../components/MediaQuery";
+import Meta from "../components/Meta";
 import PageTitle from "../components/PageTitle";
 
 const ProjectsContainer = styled.section`
@@ -163,36 +164,39 @@ const ProjectsContainer = styled.section`
 const Projects = memo(() => {
   return (
     <div className="inner">
+      <Meta title="leeyeonji : Projects" />
       <PageTitle leftText="My" rightText="Projects" contentText="Projects" />
       <ProjectsContainer>
-        {dataset && dataset.projects && dataset.projects.map((v, i) => {
-          return (
-            <div className="box" key={i}>
-              <h4 className="title">{v.title}</h4>
-              <span className="time">
-                <i className="fa-solid fa-calendar-days"></i>
-                {v.period}
-              </span>
-              <p className="description">{v.desc}</p>
-              <ul className="tech_stack">
-                {v.tech.map((desc, idx) => {
-                  return <li key={idx}>{desc}</li>;
-                })}
-              </ul>
+        {dataset &&
+          dataset.projects &&
+          dataset.projects.map((v, i) => {
+            return (
+              <div className="box" key={i}>
+                <h4 className="title">{v.title}</h4>
+                <span className="time">
+                  <i className="fa-solid fa-calendar-days"></i>
+                  {v.period}
+                </span>
+                <p className="description">{v.desc}</p>
+                <ul className="tech_stack">
+                  {v.tech.map((desc, idx) => {
+                    return <li key={idx}>{desc}</li>;
+                  })}
+                </ul>
 
-              <span className="icon">
-                <i className="fa-solid fa-arrow-right"></i>
-              </span>
+                <span className="icon">
+                  <i className="fa-solid fa-arrow-right"></i>
+                </span>
 
-              <div className="short_desc">
-                <p>{v.group}</p>
-                <h4>{v.title}</h4>
+                <div className="short_desc">
+                  <p>{v.group}</p>
+                  <h4>{v.title}</h4>
+                </div>
+
+                <NavLink className="link" to={"/projects/" + v.title}></NavLink>
               </div>
-
-              <NavLink className="link" to={"/projects/" + v.title}></NavLink>
-            </div>
-          );
-        })}
+            );
+          })}
       </ProjectsContainer>
     </div>
   );
