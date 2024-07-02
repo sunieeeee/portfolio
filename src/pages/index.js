@@ -11,6 +11,11 @@ const MainContainer = styled.main`
 
   .inner {
     display: flex;
+    
+    ${mq.maxWidth("lg")`
+      padding-top: 60px;
+      padding-bottom: 80px;
+    `}
   }
 
   .left_wrap {

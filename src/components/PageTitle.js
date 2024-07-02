@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import styled from "styled-components";
 import * as colors from "../assets/style/colors";
+import mq from "../components/MediaQuery";
 
 const PageTitleContainer = styled.div`
   padding: 80px 0;
@@ -27,6 +28,17 @@ const PageTitleContainer = styled.div`
       color: rgba(255, 255, 255, 0.07);
       z-index: -1;
       animation: titleOn 0.8s 1 forwards;
+
+      ${mq.maxWidth("md")`
+        font-size: 6rem;
+        left: 50%;
+        right: auto;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      `}
+      ${mq.maxWidth("sm")`
+        display: none
+      `}
     }
 
     span {

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {useParams} from 'react-router-dom';
 
 import * as colors from "../assets/style/colors";
+import mq from '../components/MediaQuery';
 import Meta from "../components/Meta";
 import PageTitle from "../components/PageTitle";
 import SubTitle from "../components/SubTitle";
@@ -59,6 +60,9 @@ const DetailContainer = styled.div`
         display: inline-block;
         min-width: 3.3%;
 
+        ${mq.maxWidth("lg")`
+          min-width: 1.7rem;
+        `}
         i {
           color: ${colors.ORANGE};
         }
@@ -114,7 +118,7 @@ const DetailContainer = styled.div`
         font-size: 20px;
         font-weight: 600;
       }
-      
+
       .view_desc {
         font-size: 16px;
       }

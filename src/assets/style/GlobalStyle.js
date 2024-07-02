@@ -43,8 +43,8 @@ const GlobalStyle = createGlobalStyle`
         max-width: 1100px;
         
         ${mq.maxWidth("lg")`
-        flex-direction: column;
-        padding: 60px 50px 80px;
+            flex-direction: column;
+            padding: 0 50px;
         `}
     }
 
