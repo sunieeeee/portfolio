@@ -182,6 +182,7 @@ const dataset = {
       percent: "100%",
       work_area: "검색 페이지",
       link: "https://kakao-image-search.vercel.app/",
+      github: "https://github.com/sunieeeee/kakao_imageSearch",
       group: "Frontend",
       view: [
         {
@@ -205,7 +206,8 @@ const dataset = {
       tech: ["React", "Redux", "Axios", "SCSS"],
       percent: "100%",
       work_area: "검색 페이지",
-      link: "https://movie-rank-three.vercel.app/",
+      link: "/pages/movie_rank/index.html",
+      github: "https://github.com/sunieeeee/MovieRank",
       group: "Frontend",
       view: [
         {

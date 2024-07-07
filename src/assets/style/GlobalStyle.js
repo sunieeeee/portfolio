@@ -46,6 +46,10 @@ const GlobalStyle = createGlobalStyle`
             flex-direction: column;
             padding: 0 50px;
         `}
+        ${mq.maxWidth("md")`
+            flex-direction: column;
+            padding: 0 20px;
+        `}
     }
 
     section {

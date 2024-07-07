@@ -26,13 +26,12 @@ const DetailContainer = styled.div`
       &::before {
         position: absolute;
         left: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 2px;
         content: "";
         display: inline-block;
         margin-right: 10px;
         width: 4px;
-        height: 23px;
+        height: 21px;
         background-color: #fff;
       }
     }
@@ -87,6 +86,9 @@ const DetailContainer = styled.div`
     display: flex;
     gap: 20px;
 
+    ${mq.maxWidth("md")`
+        flex-direction: column;
+    `}
     .btn_inner {
       .left {
         color: ${colors.ORANGE};
