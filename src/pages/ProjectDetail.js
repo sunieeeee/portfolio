@@ -163,7 +163,7 @@ const ProjectDetail = memo(() => {
               <b>
                 <i className="fa-solid fa-user"></i>
               </b>
-              100%
+              {projectItem.percent}
             </li>
             <li>
               <b>
@@ -196,6 +196,22 @@ const ProjectDetail = memo(() => {
               link={projectItem.link}
               leftText="PROJECT"
               rightText=": LINK"
+              target="_blank"
+            />
+          )}
+          {projectItem.pc_link && (
+            <PageBtn
+              link={projectItem.pc_link}
+              leftText="PROJECT"
+              rightText=": PC LINK"
+              target="_blank"
+            />
+          )}
+          {projectItem.mo_link && (
+            <PageBtn
+              link={projectItem.mo_link}
+              leftText="PROJECT"
+              rightText=": MO LINK"
               target="_blank"
             />
           )}

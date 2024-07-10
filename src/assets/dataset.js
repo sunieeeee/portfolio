@@ -206,13 +206,34 @@ const dataset = {
       tech: ["React", "Redux", "Axios", "SCSS"],
       percent: "100%",
       work_area: "검색 페이지",
-      link: "/pages/movie_rank/index.html",
+      link: "https://movie-rank-three.vercel.app",
       github: "https://github.com/sunieeeee/MovieRank",
       group: "Frontend",
       view: [
         {
           name: "날짜 선택 및 데이터 조회",
           img: "/img/projects/movierank/MovieRank.gif",
+        },
+      ],
+    },
+    {
+      title: "NAVER",
+      sub_title: "네이버 항공권 랜딩페이지",
+      period: "2024.06.04~2022.07.05(1개월)",
+      desc: [
+        "네이버에서 항공권 예약 시 연결되는 온라인투어의 랜딩페이지입니다.",
+        "적응형으로 pc,mo 분리작업 하였으며, 자바스크립트를 사용하여 svg태그 사용을 간편화 하였습니다.",
+      ],
+      tech: ["html & css", "jquery", "javascript"],
+      percent: "90%",
+      work_area: "랜딩 페이지",
+      pc_link: "/pages/naver_landing/AP_FLI_1000_N01.html",
+      mo_link: "/pages/naver_landing/AM_FLI_1000_N01.html",
+      group: "Publishing",
+      view: [
+        {
+          name: "랜딩 페이지",
+          img: "/img/projects/resome/hoban_main.JPG",
         },
       ],
     },
