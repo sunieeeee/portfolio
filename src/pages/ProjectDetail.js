@@ -130,6 +130,12 @@ const DetailContainer = styled.div`
         width: 100%;
         object-fit: cover;
       }
+      .view_mo {
+        margin-top: 10px;
+        max-width: 400px;
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
 `;
@@ -239,7 +245,7 @@ const ProjectDetail = memo(() => {
                         </p>
                       );
                     })}
-                  <img className="view_img" src={v.img} alt={v.name} />
+                  <img className={v.name == "랜딩 페이지 : MO" ? "view_mo" : "view_img"} src={v.img} alt={v.name} />
                 </li>
               );
             })}

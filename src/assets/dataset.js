@@ -232,9 +232,13 @@ const dataset = {
       group: "Publishing",
       view: [
         {
-          name: "랜딩 페이지",
-          img: "/img/projects/resome/hoban_main.JPG",
+          name: "랜딩 페이지 : PC",
+          img: "/img/projects/naver_landing/naver_pc.gif",
         },
+        {
+          name: "랜딩 페이지 : MO",
+          img: "/img/projects/naver_landing/naver_mo.jpg",
+        }
       ],
     },
     {
